@@ -22,3 +22,6 @@ For developement: Xcode 8
 3. Enable PiPifier (If you don't see PiPifier and you built the app by yourself you need to sign it or choose Developer -> Allow unsigned extensions)<br />
 4. Choose View > Customize Toolbar and drag the PiPifier icon to your toolbar<br />
 5. To use Pipifier just press the icon when you're watching to an HTML5 video (Note: You need to interact with the video once. If it's autoplaying just pause and play again)
+
+#Notes for developers
+The code is a bit dirty and there are some unused parts in it (Tried to add more features before I needed to focus on other things). If you want to help me clean it up feel free to do so :)
