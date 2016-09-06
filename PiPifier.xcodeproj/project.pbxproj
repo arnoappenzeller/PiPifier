@@ -196,13 +196,11 @@
 				TargetAttributes = {
 					11F1B4FD1D4EC0CC0041579B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
 					};
 					11F1B5131D4EC1010041579B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
 					};
@@ -392,7 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PiPifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.APPenzeller.PiPifier;
@@ -408,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PiPifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.APPenzeller.PiPifier;
@@ -422,7 +420,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "PiPifier-Safari-Extension/PiPifier_Safari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "PiPifier-Safari-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -438,7 +436,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "PiPifier-Safari-Extension/PiPifier_Safari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "PiPifier-Safari-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
