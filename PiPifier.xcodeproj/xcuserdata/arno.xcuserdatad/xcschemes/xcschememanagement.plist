@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>PiPifier-Safari-Extension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>PiPifier.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>11F1B4FD1D4EC0CC0041579B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>11F1B5131D4EC1010041579B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
