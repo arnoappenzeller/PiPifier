@@ -12,7 +12,7 @@ safari.self.addEventListener("activate", tabChanged);
 function messageHandler(event)
 {
     if (event.name === "enablePiP") {
-        document.querySelectorAll("video")[0].webkitSetPresentationMode("picture-in-picture");
+        document.querySelectorAll('video')[0].webkitSetPresentationMode('picture-in-picture');
     }
     
     else if (event.name == "checkForVideo"){
