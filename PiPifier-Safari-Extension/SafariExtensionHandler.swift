@@ -71,12 +71,14 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         })
     }
     
-    override func validateToolbarItem(in window: SFSafariWindow, validationHandler: ((Bool, String) -> Void)) {
+    override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping (Bool, String) -> Void) {
         validationHandler(true,"")
         
         
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
+
     }
+    
     
     override func popoverViewController() -> SFSafariExtensionViewController {
         return SafariExtensionViewController.shared
