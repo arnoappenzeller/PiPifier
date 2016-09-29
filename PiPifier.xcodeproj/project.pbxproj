@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		110895A31D54DCBE00BF3465 /* ExtensionStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */; };
+		11BE4A4C1D9D87D6002AC03D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11BE4A4B1D9D87D6002AC03D /* StoreKit.framework */; };
 		11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5011D4EC0CD0041579B /* AppDelegate.swift */; };
 		11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5031D4EC0CD0041579B /* ViewController.swift */; };
 		11F1B5061D4EC0CD0041579B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5051D4EC0CD0041579B /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionStateManager.swift; sourceTree = "<group>"; };
+		11BE4A4B1D9D87D6002AC03D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		11F1B4FE1D4EC0CD0041579B /* PiPifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1B5011D4EC0CD0041579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F1B5031D4EC0CD0041579B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11BE4A4C1D9D87D6002AC03D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +120,7 @@
 		11F1B5151D4EC1010041579B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11BE4A4B1D9D87D6002AC03D /* StoreKit.framework */,
 				11F1B5161D4EC1010041579B /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -199,6 +203,11 @@
 						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					11F1B5131D4EC1010041579B = {
 						CreatedOnToolsVersion = 8.0;
