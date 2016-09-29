@@ -81,6 +81,38 @@
             endingLineNumber = "70"
             landmarkName = "toolbarItemClicked(in:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Button.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1)"
+                  moduleName = "PiPifier Button"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496867596.219803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Button.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "PiPifier Button"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496867596.221825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -113,6 +145,38 @@
             endingLineNumber = "75"
             landmarkName = "toolbarItemClicked(in:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Button.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1)"
+                  moduleName = "PiPifier Button"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496867596.237484"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Button.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "PiPifier Button"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496867596.239495"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "182">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -145,6 +209,38 @@
             endingLineNumber = "71"
             landmarkName = "toolbarItemClicked(in:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Button.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "PiPifier Button"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496867596.244376"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Button.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "PiPifier Button"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496867596.246499"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

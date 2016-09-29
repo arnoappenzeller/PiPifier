@@ -49,6 +49,7 @@
 /* Begin PBXFileReference section */
 		110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionStateManager.swift; sourceTree = "<group>"; };
 		11BE4A4B1D9D87D6002AC03D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		11BE4A4D1D9D960E002AC03D /* PiPifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier.entitlements; sourceTree = "<group>"; };
 		11F1B4FE1D4EC0CD0041579B /* PiPifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1B5011D4EC0CD0041579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F1B5031D4EC0CD0041579B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		11F1B5001D4EC0CD0041579B /* PiPifier */ = {
 			isa = PBXGroup;
 			children = (
+				11BE4A4D1D9D960E002AC03D /* PiPifier.entitlements */,
 				11F1B5011D4EC0CD0041579B /* AppDelegate.swift */,
 				11F1B5031D4EC0CD0041579B /* ViewController.swift */,
 				11F1B5051D4EC0CD0041579B /* Assets.xcassets */,
@@ -205,6 +207,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
 								enabled = 1;
 							};
 						};
@@ -399,6 +404,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PiPifier/PiPifier.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;
@@ -415,6 +421,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PiPifier/PiPifier.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;
