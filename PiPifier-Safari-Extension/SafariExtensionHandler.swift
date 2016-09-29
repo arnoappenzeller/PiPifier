@@ -63,10 +63,15 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     override func toolbarItemClicked(in window: SFSafariWindow) {
         // This method will be called when your toolbar item is clicked.
-        window.getActiveTab(completionHandler: {
-            $0?.getActivePage(completionHandler: {
-                page in
-                page?.dispatchMessageToScript(withName: "enablePiP", userInfo: nil)
+        
+        SFSafariApplication.getActiveWindow(completionHandler: {activeWindow in
+            //acknowledge to espenbye for pointing out that this works in fullscreen as well
+            //see: https://github.com/arnoappenzeller/PiPifier/issues/4
+            activeWindow?.getActiveTab(completionHandler: {
+                $0?.getActivePage(completionHandler: {
+                    page in
+                    page?.dispatchMessageToScript(withName: "enablePiP", userInfo: nil)
+                })
             })
         })
     }

@@ -17,7 +17,7 @@
 		11F1B51E1D4EC1010041579B /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B51D1D4EC1010041579B /* SafariExtensionViewController.swift */; };
 		11F1B5211D4EC1010041579B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B51F1D4EC1010041579B /* SafariExtensionViewController.xib */; };
 		11F1B5241D4EC1010041579B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5231D4EC1010041579B /* script.js */; };
-		11F1B5291D4EC1010041579B /* PiPifier-Safari-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11F1B5141D4EC1010041579B /* PiPifier-Safari-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11F1B5291D4EC1010041579B /* PiPifier Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11F1B5141D4EC1010041579B /* PiPifier Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				11F1B5291D4EC1010041579B /* PiPifier-Safari-Extension.appex in Embed App Extensions */,
+				11F1B5291D4EC1010041579B /* PiPifier Button.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +53,7 @@
 		11F1B5051D4EC0CD0041579B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F1B5081D4EC0CD0041579B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11F1B50A1D4EC0CD0041579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11F1B5141D4EC1010041579B /* PiPifier-Safari-Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PiPifier-Safari-Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F1B5141D4EC1010041579B /* PiPifier Button.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PiPifier Button.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1B5161D4EC1010041579B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		11F1B51A1D4EC1010041579B /* PiPifier_Safari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier_Safari_Extension.entitlements; sourceTree = "<group>"; };
 		11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				11F1B4FE1D4EC0CD0041579B /* PiPifier.app */,
-				11F1B5141D4EC1010041579B /* PiPifier-Safari-Extension.appex */,
+				11F1B5141D4EC1010041579B /* PiPifier Button.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 			productReference = 11F1B4FE1D4EC0CD0041579B /* PiPifier.app */;
 			productType = "com.apple.product-type.application";
 		};
-		11F1B5131D4EC1010041579B /* PiPifier-Safari-Extension */ = {
+		11F1B5131D4EC1010041579B /* PiPifier Button */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11F1B52A1D4EC1010041579B /* Build configuration list for PBXNativeTarget "PiPifier-Safari-Extension" */;
+			buildConfigurationList = 11F1B52A1D4EC1010041579B /* Build configuration list for PBXNativeTarget "PiPifier Button" */;
 			buildPhases = (
 				11F1B5101D4EC1010041579B /* Sources */,
 				11F1B5111D4EC1010041579B /* Frameworks */,
@@ -179,9 +179,9 @@
 			);
 			dependencies = (
 			);
-			name = "PiPifier-Safari-Extension";
+			name = "PiPifier Button";
 			productName = "PiPifier-Safari-Extension";
-			productReference = 11F1B5141D4EC1010041579B /* PiPifier-Safari-Extension.appex */;
+			productReference = 11F1B5141D4EC1010041579B /* PiPifier Button.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -196,11 +196,13 @@
 				TargetAttributes = {
 					11F1B4FD1D4EC0CC0041579B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
 					};
 					11F1B5131D4EC1010041579B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
 					};
@@ -220,7 +222,7 @@
 			projectRoot = "";
 			targets = (
 				11F1B4FD1D4EC0CC0041579B /* PiPifier */,
-				11F1B5131D4EC1010041579B /* PiPifier-Safari-Extension */,
+				11F1B5131D4EC1010041579B /* PiPifier Button */,
 			);
 		};
 /* End PBXProject section */
@@ -272,7 +274,7 @@
 /* Begin PBXTargetDependency section */
 		11F1B5281D4EC1010041579B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11F1B5131D4EC1010041579B /* PiPifier-Safari-Extension */;
+			target = 11F1B5131D4EC1010041579B /* PiPifier Button */;
 			targetProxy = 11F1B5271D4EC1010041579B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -390,7 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = PiPifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.APPenzeller.PiPifier;
@@ -406,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = PiPifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.APPenzeller.PiPifier;
@@ -420,7 +422,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "PiPifier-Safari-Extension/PiPifier_Safari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = "PiPifier-Safari-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -436,7 +438,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "PiPifier-Safari-Extension/PiPifier_Safari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = "PiPifier-Safari-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -468,7 +470,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11F1B52A1D4EC1010041579B /* Build configuration list for PBXNativeTarget "PiPifier-Safari-Extension" */ = {
+		11F1B52A1D4EC1010041579B /* Build configuration list for PBXNativeTarget "PiPifier Button" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11F1B52B1D4EC1010041579B /* Debug */,

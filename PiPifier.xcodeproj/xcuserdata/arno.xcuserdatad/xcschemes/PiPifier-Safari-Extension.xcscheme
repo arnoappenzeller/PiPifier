@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "11F1B5131D4EC1010041579B"
-               BuildableName = "PiPifier-Safari-Extension.appex"
-               BlueprintName = "PiPifier-Safari-Extension"
+               BuildableName = "PiPifier Button.appex"
+               BlueprintName = "PiPifier Button"
                ReferencedContainer = "container:PiPifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11F1B5131D4EC1010041579B"
-            BuildableName = "PiPifier-Safari-Extension.appex"
-            BlueprintName = "PiPifier-Safari-Extension"
+            BuildableName = "PiPifier Button.appex"
+            BlueprintName = "PiPifier Button"
             ReferencedContainer = "container:PiPifier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,8 +67,12 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.Safari"
+         RemotePath = "/Applications/Safari.app">
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11F1B4FD1D4EC0CC0041579B"
@@ -76,7 +80,7 @@
             BlueprintName = "PiPifier"
             ReferencedContainer = "container:PiPifier.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

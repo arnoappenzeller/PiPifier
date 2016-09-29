@@ -22,7 +22,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
@@ -64,6 +64,230 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "messageReceived(withName:from:userInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "toolbarItemClicked(in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Safari_Extension.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1)"
+                  moduleName = "PiPifier-Safari-Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496860428.06128"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Safari_Extension.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "PiPifier-Safari-Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496860428.063148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "toolbarItemClicked(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "toolbarItemClicked(in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Safari_Extension.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1)"
+                  moduleName = "PiPifier-Safari-Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496860428.080299"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Safari_Extension.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "PiPifier-Safari-Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496860428.082051"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "182">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "validateToolbarItem(in:validationHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "toolbarItemClicked(in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Safari_Extension.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "PiPifier-Safari-Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496860428.085715"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PiPifier_Safari_Extension.SafariExtensionHandler.(toolbarItemClicked (in : __ObjC.SFSafariWindow) -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "PiPifier-Safari-Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arno/Dropbox/Programmier_Projekte/PiPifier/PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+                  timestampString = "496860428.087618"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "toolbarItemClicked(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "toolbarItemClicked(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PiPifier-Safari-Extension/SafariExtensionHandler.swift"
+            timestampString = "496860404.952147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "validateToolbarItem(in:validationHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
