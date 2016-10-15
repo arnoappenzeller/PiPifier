@@ -1,57 +1,33 @@
-
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
     safari.self.addEventListener("message", messageHandler);
-    safari.self.addEventListener("refreshVideoState",messageHandler);
+    safari.self.addEventListener("refreshVideoState", messageHandler);
 });
 
 safari.self.addEventListener("activate", tabChanged);
 
-
-
-
-function messageHandler(event)
-{
-    if (event.name === "enablePiP") {
-        document.querySelectorAll('video')[0].webkitSetPresentationMode('picture-in-picture');
-    }
-    
-    else if (event.name == "checkForVideo"){
-        lookForVideo();
+function messageHandler(event) {
+    if (event.name === "enablePiP" && getVideo() != null) {
+        getVideo().webkitSetPresentationMode('picture-in-picture');
+    } else if (event.name === "checkForVideo") {
+        checkForVideo();
     }
 }
 
-function lookForVideo(){
-    if (window == window.top){
-        if (isAVideoOnPage()){
-            console.log("Found a video on top");
-            safari.extension.dispatchMessage("videoFound");
-        }
-        else{
-            console.log("Found no video on top");
-            safari.extension.dispatchMessage("noVideoFound");
-        }
-    }
-    else {
-        if (isAVideoOnPage()){
-            console.log("Found video somewhere else");
-            safari.extension.dispatchMessage("videoFound");
-        }
-    }
+function checkForVideo() {
+	if (getVideo() != null) {
+		console.log("Found a video");
+		safari.extension.dispatchMessage("videoFound");
+	} else if (window == window.top) {
+		console.log("Found no video on top");
+		safari.extension.dispatchMessage("noVideoFound");
+	}
 }
 
-function tabChanged(event)
-{
-    console.log("Changed a tab");
+function tabChanged() {
+    console.log("Changed tab");
     safari.extension.dispatchMessage("tabChange");
 }
 
-
-//checks if there is a video on the page and returns true if there is one
-function isAVideoOnPage(){
-    if (document.querySelectorAll("video").length > 0){
-        return true;
-    }
-    else{
-        return false;
-    }
+function getVideo() {
+	return document.getElementsByTagName('video')[0];
 }
