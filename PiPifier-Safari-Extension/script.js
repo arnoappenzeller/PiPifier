@@ -1,6 +1,6 @@
-safari.self.addEventListener("message", messageHandler); // Message recieved from swift code
+safari.self.addEventListener("message", messageHandler); // Message recieved from Swift code
 safari.self.addEventListener("activate", checkForVideo); // Tab changed
-document.addEventListener("DOMContentLoaded", checkForVideo); // DOM loaded
+new MutationObserver(checkForVideo).observe(document, {subtree: true, childList: true}); // DOM changed
 
 function dispatchMessage(messageName) {
 	safari.extension.dispatchMessage(messageName);
@@ -12,14 +12,24 @@ function messageHandler(event) {
     }
 }
 
+var firstCheck = true;
+var previousResult = false;
+
 function checkForVideo() {
 	if (getVideo() != null) {
-		console.log("Found a video");
-		dispatchMessage("videoFound");
+		if (!previousResult) {
+			previousResult = true;
+			console.log("Found a video");
+			dispatchMessage("videoFound");
+		}
 	} else if (window == window.top) {
-		console.log("Found no video on top");
-		dispatchMessage("noVideoFound");
+		if (previousResult || firstCheck) {
+			previousResult = false;
+			console.log("Found no video on top");
+			dispatchMessage("noVideoFound");
+		}
 	}
+	firstCheck = false;
 }
 
 function getVideo() {
