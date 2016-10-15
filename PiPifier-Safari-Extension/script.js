@@ -1,31 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    safari.self.addEventListener("message", messageHandler);
-    safari.self.addEventListener("refreshVideoState", messageHandler);
-});
+safari.self.addEventListener("message", messageHandler); // Message recieved from swift code
+safari.self.addEventListener("activate", checkForVideo); // Tab changed
+document.addEventListener("DOMContentLoaded", checkForVideo); // DOM loaded
 
-safari.self.addEventListener("activate", tabChanged);
+function dispatchMessage(messageName) {
+	safari.extension.dispatchMessage(messageName);
+}
 
 function messageHandler(event) {
     if (event.name === "enablePiP" && getVideo() != null) {
         getVideo().webkitSetPresentationMode('picture-in-picture');
-    } else if (event.name === "checkForVideo") {
-        checkForVideo();
     }
 }
 
 function checkForVideo() {
 	if (getVideo() != null) {
 		console.log("Found a video");
-		safari.extension.dispatchMessage("videoFound");
+		dispatchMessage("videoFound");
 	} else if (window == window.top) {
 		console.log("Found no video on top");
-		safari.extension.dispatchMessage("noVideoFound");
+		dispatchMessage("noVideoFound");
 	}
-}
-
-function tabChanged() {
-    console.log("Changed tab");
-    safari.extension.dispatchMessage("tabChange");
 }
 
 function getVideo() {

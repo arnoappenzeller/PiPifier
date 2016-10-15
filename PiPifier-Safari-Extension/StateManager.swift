@@ -6,12 +6,11 @@
 //  Copyright © 2016 APPenzeller. All rights reserved.
 //
 
-import Foundation
+import SafariServices
 
-struct StateManager {
+class StateManager {
     static let shared = StateManager()
 	private init() {}
-    var videoFound: Bool = false
-    var currentURL: URL?
-    var validationHandler: ((Bool, String) -> Void)?
+	
+	var videosFound: [SFSafariPage: Bool] = [:]
 }
