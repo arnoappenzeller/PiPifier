@@ -1,57 +1,37 @@
+safari.self.addEventListener("message", messageHandler); // Message recieved from Swift code
+safari.self.addEventListener("activate", checkForVideo); // Tab changed
+new MutationObserver(checkForVideo).observe(document, {subtree: true, childList: true}); // DOM changed
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    safari.self.addEventListener("message", messageHandler);
-    safari.self.addEventListener("refreshVideoState",messageHandler);
-});
+function dispatchMessage(messageName) {
+	safari.extension.dispatchMessage(messageName);
+}
 
-safari.self.addEventListener("activate", tabChanged);
-
-
-
-
-function messageHandler(event)
-{
-    if (event.name === "enablePiP") {
-        document.querySelectorAll('video')[0].webkitSetPresentationMode('picture-in-picture');
-    }
-    
-    else if (event.name == "checkForVideo"){
-        lookForVideo();
+function messageHandler(event) {
+    if (event.name === "enablePiP" && getVideo() != null) {
+        getVideo().webkitSetPresentationMode('picture-in-picture');
     }
 }
 
-function lookForVideo(){
-    if (window == window.top){
-        if (isAVideoOnPage()){
-            console.log("Found a video on top");
-            safari.extension.dispatchMessage("videoFound");
-        }
-        else{
-            console.log("Found no video on top");
-            safari.extension.dispatchMessage("noVideoFound");
-        }
-    }
-    else {
-        if (isAVideoOnPage()){
-            console.log("Found video somewhere else");
-            safari.extension.dispatchMessage("videoFound");
-        }
-    }
+var firstCheck = true;
+var previousResult = false;
+
+function checkForVideo() {
+	if (getVideo() != null) {
+		if (!previousResult) {
+			previousResult = true;
+			console.log("Found a video");
+			dispatchMessage("videoFound");
+		}
+	} else if (window == window.top) {
+		if (previousResult || firstCheck) {
+			previousResult = false;
+			console.log("Found no video on top");
+			dispatchMessage("noVideoFound");
+		}
+	}
+	firstCheck = false;
 }
 
-function tabChanged(event)
-{
-    console.log("Changed a tab");
-    safari.extension.dispatchMessage("tabChange");
-}
-
-
-//checks if there is a video on the page and returns true if there is one
-function isAVideoOnPage(){
-    if (document.querySelectorAll("video").length > 0){
-        return true;
-    }
-    else{
-        return false;
-    }
+function getVideo() {
+	return document.getElementsByTagName('video')[0];
 }

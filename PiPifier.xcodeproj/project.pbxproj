@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		110895A31D54DCBE00BF3465 /* ExtensionStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */; };
+		110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* StateManager.swift */; };
 		11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5011D4EC0CD0041579B /* AppDelegate.swift */; };
 		11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5031D4EC0CD0041579B /* ViewController.swift */; };
 		11F1B5061D4EC0CD0041579B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5051D4EC0CD0041579B /* Assets.xcassets */; };
 		11F1B5091D4EC0CD0041579B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5071D4EC0CD0041579B /* Main.storyboard */; };
 		11F1B5171D4EC1010041579B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F1B5161D4EC1010041579B /* Cocoa.framework */; };
 		11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */; };
-		11F1B51E1D4EC1010041579B /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B51D1D4EC1010041579B /* SafariExtensionViewController.swift */; };
-		11F1B5211D4EC1010041579B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B51F1D4EC1010041579B /* SafariExtensionViewController.xib */; };
 		11F1B5241D4EC1010041579B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5231D4EC1010041579B /* script.js */; };
 		11F1B5291D4EC1010041579B /* PiPifier Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11F1B5141D4EC1010041579B /* PiPifier Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */; };
@@ -46,7 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionStateManager.swift; sourceTree = "<group>"; };
+		110895A21D54DCBE00BF3465 /* StateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		11F1B4FE1D4EC0CD0041579B /* PiPifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1B5011D4EC0CD0041579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F1B5031D4EC0CD0041579B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +55,6 @@
 		11F1B5161D4EC1010041579B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		11F1B51A1D4EC1010041579B /* PiPifier_Safari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier_Safari_Extension.entitlements; sourceTree = "<group>"; };
 		11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
-		11F1B51D1D4EC1010041579B /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
-		11F1B5201D4EC1010041579B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		11F1B5221D4EC1010041579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F1B5231D4EC1010041579B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PiP_Toolbar_Icon.pdf; sourceTree = "<group>"; };
@@ -125,12 +121,10 @@
 		11F1B5181D4EC1010041579B /* PiPifier-Safari-Extension */ = {
 			isa = PBXGroup;
 			children = (
-				11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */,
-				110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */,
-				11F1B51D1D4EC1010041579B /* SafariExtensionViewController.swift */,
-				11F1B51F1D4EC1010041579B /* SafariExtensionViewController.xib */,
-				11F1B5221D4EC1010041579B /* Info.plist */,
 				11F1B5231D4EC1010041579B /* script.js */,
+				11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */,
+				110895A21D54DCBE00BF3465 /* StateManager.swift */,
+				11F1B5221D4EC1010041579B /* Info.plist */,
 				11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */,
 				11F1B5191D4EC1010041579B /* Supporting Files */,
 			);
@@ -241,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F1B5211D4EC1010041579B /* SafariExtensionViewController.xib in Resources */,
 				11F1B5241D4EC1010041579B /* script.js in Resources */,
 				11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */,
 			);
@@ -263,9 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F1B51E1D4EC1010041579B /* SafariExtensionViewController.swift in Sources */,
 				11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */,
-				110895A31D54DCBE00BF3465 /* ExtensionStateManager.swift in Sources */,
+				110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +278,6 @@
 				11F1B5081D4EC0CD0041579B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		11F1B51F1D4EC1010041579B /* SafariExtensionViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11F1B5201D4EC1010041579B /* Base */,
-			);
-			name = SafariExtensionViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
