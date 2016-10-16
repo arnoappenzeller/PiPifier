@@ -7,10 +7,8 @@ var whiteSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white.svg'
 var blackSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon.svg'
 
 safari.self.addEventListener("message", messageHandler); // Message recieved from Swift code
-window.onfocus = function() {checkForVideo(true)}
-new MutationObserver(function() {checkForVideo(false)}).observe(document, {subtree: true, childList: true}); // DOM changed
-
-
+window.onfocus = checkForVideo // Tab selected
+new MutationObserver(checkForVideo).observe(document, {subtree: true, childList: true}); // DOM changed
 
 
 function dispatchMessage(messageName) {
@@ -26,22 +24,14 @@ function messageHandler(event) {
     }
 }
 
-var previousResult = false;
-
-function checkForVideo(force) {
+function checkForVideo() {
 	if (getVideo() != null) {
-		if (!previousResult || force) {
-			previousResult = true;
-			console.log("Found a video");
-			shouldCustomPiPButtonsBeAdded();
-			dispatchMessage("videoFound");
-		}
+		console.log("Found a video");
+		shouldCustomPiPButtonsBeAdded();
+		dispatchMessage("videoFound");
 	} else if (window == window.top) {
-		if (previousResult || force) {
-			previousResult = false;
-			console.log("Found no video on top");
-			dispatchMessage("noVideoFound");
-		}
+		console.log("Found no video on top");
+		dispatchMessage("noVideoFound");
 	}
 }
 
