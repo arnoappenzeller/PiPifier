@@ -26,26 +26,16 @@ function messageHandler(event) {
     }
 }
 
-var firstCheck = true;
-var previousResult = false;
-
 
 function checkForVideo() {
 	if (getVideo() != null) {
-		if (!previousResult) {
-			previousResult = true;
-			console.log("Found a video");
-            shouldCustomPiPButtonsBeAdded();
-			dispatchMessage("videoFound");
-		}
+		console.log("Found a video");
+        shouldCustomPiPButtonsBeAdded();
+		dispatchMessage("videoFound");
 	} else if (window == window.top) {
-		if (previousResult || firstCheck) {
-			previousResult = false;
-			console.log("Found no video on top");
-			dispatchMessage("noVideoFound");
-		}
+		console.log("Found no video on top");
+		dispatchMessage("noVideoFound");
 	}
-	firstCheck = false;
 }
 
 function getVideo() {
