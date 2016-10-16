@@ -25,11 +25,12 @@ function messageHandler(event) {
 }
 
 function checkForVideo() {
+	if (window != window.top) return;
 	if (getVideo() != null) {
 		console.log("Found a video");
 		shouldCustomPiPButtonsBeAdded();
 		dispatchMessage("videoFound");
-	} else if (window == window.top) {
+	} else {
 		console.log("Found no video on top");
 		dispatchMessage("noVideoFound");
 	}
