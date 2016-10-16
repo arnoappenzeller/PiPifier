@@ -23,8 +23,13 @@ For developement: Xcode 8
 4. Choose View > Customize Toolbar and drag the PiPifier icon to your toolbar<br />
 5. To use Pipifier just press the icon when you're watching to an HTML5 video (Note: You need to interact with the video once. If it's autoplaying just pause and play again)
 
+#How can I help?
+If you are a developer feel free to make any addition to improve PiPifier.
+
+If you are user and want a native PiP button in any video player please make a request in the corresponding issue
+
 #Note for developers
 The code is a bit dirty and there are some unused parts in it (Tried to add more features before I needed to focus on other things). If you want to help me clean it up feel free to do so :)
 
 #Contact
-Made by [@arno_app](https://twitter.com/arno_app) with an important bug fix by [@Cacauu_de](https://twitter.com/Cacauu_de)
+Made by [@arno_app](https://twitter.com/arno_app) with an important bug fix by [@Cacauu_de](https://twitter.com/Cacauu_de).

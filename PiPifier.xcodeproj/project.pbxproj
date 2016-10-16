@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* StateManager.swift */; };
+		115B6C241DB38BD100AE9B6F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B6C231DB38BD100AE9B6F /* SettingsManager.swift */; };
+		115B6C251DB38BD100AE9B6F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B6C231DB38BD100AE9B6F /* SettingsManager.swift */; };
 		11B4E1B81DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */; };
 		11B4E1B91DB2F56C00007495 /* PiP_Toolbar_Icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */; };
 		11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5011D4EC0CD0041579B /* AppDelegate.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		110895A21D54DCBE00BF3465 /* StateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		114E8EE41DB386E400C22D36 /* PiPifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier.entitlements; sourceTree = "<group>"; };
+		115B6C231DB38BD100AE9B6F /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = PiPifier/SettingsManager.swift; sourceTree = "<group>"; };
 		11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon_white.svg; sourceTree = "<group>"; };
 		11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon.svg; sourceTree = "<group>"; };
 		11F1B4FE1D4EC0CD0041579B /* PiPifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,7 @@
 		11F1B4F51D4EC0CC0041579B = {
 			isa = PBXGroup;
 			children = (
+				115B6C231DB38BD100AE9B6F /* SettingsManager.swift */,
 				11F1B5001D4EC0CD0041579B /* PiPifier */,
 				11F1B5181D4EC1010041579B /* PiPifier-Safari-Extension */,
 				11F1B5151D4EC1010041579B /* Frameworks */,
@@ -105,6 +110,7 @@
 		11F1B5001D4EC0CD0041579B /* PiPifier */ = {
 			isa = PBXGroup;
 			children = (
+				114E8EE41DB386E400C22D36 /* PiPifier.entitlements */,
 				11F1B5011D4EC0CD0041579B /* AppDelegate.swift */,
 				11F1B5031D4EC0CD0041579B /* ViewController.swift */,
 				11F1B5051D4EC0CD0041579B /* Assets.xcassets */,
@@ -199,12 +205,22 @@
 						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					11F1B5131D4EC1010041579B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -257,6 +273,7 @@
 			files = (
 				11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */,
 				11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */,
+				115B6C241DB38BD100AE9B6F /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +283,7 @@
 			files = (
 				11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */,
 				110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */,
+				115B6C251DB38BD100AE9B6F /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +400,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PiPifier/PiPifier.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;
@@ -398,6 +417,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PiPifier/PiPifier.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;

@@ -9,15 +9,11 @@
 import SafariServices
 
 enum Message: String {
-	case videoFound, noVideoFound
+	case videoFound, noVideoFound, shouldCustomPiPButtonsBeAdded
 }
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
-    var manualDeactivation = false
-	
-	var stateManager = StateManager.shared
-	
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]? = nil) {
 		guard let message = Message(rawValue: messageName) else {
 			NSLog("unhandled message")
@@ -29,11 +25,14 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 			updateState(of: page, videoFound: true)
 		case .noVideoFound:
 			updateState(of: page, videoFound: false)
+        case .shouldCustomPiPButtonsBeAdded:
+            checkForCustomPiPButtonSetting()
 		}
 	}
+    
 	
 	func updateState(of page: SFSafariPage, videoFound: Bool) {
-		stateManager.videosFound[page] = videoFound
+		StateManager.shared.videosFound[page] = videoFound
 		SFSafariApplication.setToolbarItemsNeedUpdate()
     }
 	
@@ -48,7 +47,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping (Bool, String) -> Void) {
 		getActivePage {
 			guard let page = $0 else {return}
-			let videoFound = self.stateManager.videosFound[page] ?? false
+            
+			let videoFound = StateManager.shared.videosFound[page] ?? false
 			validationHandler(videoFound, "")
 		}
 	}
@@ -56,5 +56,15 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 	func getActivePage(completionHandler: @escaping (SFSafariPage?) -> Void) {
 		SFSafariApplication.getActiveWindow {$0?.getActiveTab {$0?.getActivePage(completionHandler: completionHandler)}}
 	}
+    
+    //MARK: - customPiPButton methods
+    
+    func checkForCustomPiPButtonSetting(){
+        if SettingsManager.shared.isCustomPiPButtonsEnabled{
+            getActivePage {
+                $0?.dispatchMessageToScript(withName: "addCustomPiPButtons", userInfo: nil)
+            }
+        }
+    }
 	
 }

@@ -8,4 +8,18 @@
 
 import Cocoa
 
-class ViewController: NSViewController {}
+class ViewController: NSViewController {
+    
+    @IBOutlet weak var customPiPButtonsButton: NSButton!
+    
+    @IBAction func customPiPButtonsButtonPressed(_ sender: AnyObject) {
+        let buttonState = (sender as! NSButton).state
+        SettingsManager.shared.isCustomPiPButtonsEnabled = buttonState == 1
+        
+    }
+    
+    override func viewDidLoad() {
+        customPiPButtonsButton.state = SettingsManager.shared.isCustomPiPButtonsEnabled ? 1 : 0
+    }
+
+}

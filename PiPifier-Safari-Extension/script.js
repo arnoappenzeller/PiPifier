@@ -10,7 +10,7 @@ safari.self.addEventListener("message", messageHandler); // Message recieved fro
 safari.self.addEventListener("activate", checkForVideo); // Tab changed
 new MutationObserver(checkForVideo).observe(document, {subtree: true, childList: true}); // DOM changed
 
-console.log(safari.extension.baseURI + 'PiP_Toolbar_Icon_white.svg');
+
 
 
 function dispatchMessage(messageName) {
@@ -21,19 +21,13 @@ function messageHandler(event) {
     if (event.name === "enablePiP" && getVideo() != null) {
         getVideo().webkitSetPresentationMode('picture-in-picture');
     }
+    else if (event.name === "addCustomPiPButtons"){
+        checkForCustomPiPButtonSupport();
+    }
 }
 
 var firstCheck = true;
 var previousResult = false;
-
-function checkForNativeButtonSupport(){
-    //add custom eventListener for youtube
-    if (isYoutube.map(function(obj){return location.hostname.match(obj) != null;}).indexOf(true) >= 0){
-        addYouTubeVideoButton();
-    }
-    //check for other players
-    //TODO: add other players here
-}
 
 
 function checkForVideo() {
@@ -41,7 +35,7 @@ function checkForVideo() {
 		if (!previousResult) {
 			previousResult = true;
 			console.log("Found a video");
-            checkForNativeButtonSupport();
+            shouldCustomPiPButtonsBeAdded();
 			dispatchMessage("videoFound");
 		}
 	} else if (window == window.top) {
@@ -61,6 +55,21 @@ function getVideo() {
 
 //----------------- Custom Button Methods -----------------
 
+function shouldCustomPiPButtonsBeAdded(){
+    dispatchMessage("shouldCustomPiPButtonsBeAdded");
+}
+
+function checkForCustomPiPButtonSupport(){
+    //add custom eventListener for youtube
+    if (isYoutube.map(function(obj){return location.hostname.match(obj) != null;}).indexOf(true) >= 0){
+        addYouTubeVideoButton();
+    }
+    //check for other players
+    //TODO: add other players here
+}
+
+
+//----------------- Player Implementations -------------------------
 function addYouTubeVideoButton() {
     var video = document.getElementsByTagName('video')[0];
     
