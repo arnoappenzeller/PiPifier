@@ -64,6 +64,9 @@ function checkForCustomPiPButtonSupport(){
     if (isYoutube.map(function(obj){return location.hostname.match(obj) != null;}).indexOf(true) >= 0){
         addYouTubeVideoButton();
     }
+    else if (location.hostname.match('netflix') != null;){
+        
+    }
     //check for other players
     //TODO: add other players here
 }
@@ -89,5 +92,8 @@ function addYouTubeVideoButton() {
         button.appendChild(buttonImage);
         
         document.getElementsByClassName("ytp-right-controls")[0].appendChild(button);
-    }
+}
+    
+
+
 }
