@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* StateManager.swift */; };
+		11B4E1B81DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */; };
+		11B4E1B91DB2F56C00007495 /* PiP_Toolbar_Icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */; };
 		11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5011D4EC0CD0041579B /* AppDelegate.swift */; };
 		11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5031D4EC0CD0041579B /* ViewController.swift */; };
 		11F1B5061D4EC0CD0041579B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5051D4EC0CD0041579B /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		110895A21D54DCBE00BF3465 /* StateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon_white.svg; sourceTree = "<group>"; };
+		11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon.svg; sourceTree = "<group>"; };
 		11F1B4FE1D4EC0CD0041579B /* PiPifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1B5011D4EC0CD0041579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F1B5031D4EC0CD0041579B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		11F1B5181D4EC1010041579B /* PiPifier-Safari-Extension */ = {
 			isa = PBXGroup;
 			children = (
+				11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */,
+				11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */,
 				11F1B5231D4EC1010041579B /* script.js */,
 				11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */,
 				110895A21D54DCBE00BF3465 /* StateManager.swift */,
@@ -235,6 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B4E1B81DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg in Resources */,
+				11B4E1B91DB2F56C00007495 /* PiP_Toolbar_Icon.svg in Resources */,
 				11F1B5241D4EC1010041579B /* script.js in Resources */,
 				11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */,
 			);
