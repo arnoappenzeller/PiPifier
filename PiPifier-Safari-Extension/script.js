@@ -31,14 +31,14 @@ var previousResult = false;
 function checkForVideo(force) {
 	if (getVideo() != null) {
 		if (!previousResult || force) {
-			previousResult = true
+			previousResult = true;
 			console.log("Found a video");
 			shouldCustomPiPButtonsBeAdded();
 			dispatchMessage("videoFound");
 		}
 	} else if (window == window.top) {
 		if (previousResult || force) {
-			previousResult = false
+			previousResult = false;
 			console.log("Found no video on top");
 			dispatchMessage("noVideoFound");
 		}
