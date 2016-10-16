@@ -64,6 +64,10 @@ function checkForCustomPiPButtonSupport(){
     if (isYoutube.map(function(obj){return location.hostname.match(obj) != null;}).indexOf(true) >= 0){
         addYouTubeVideoButton();
     }
+    //check for videoJS player on site
+    else if(document.getElementsByClassName('vjs-control-bar').length > 0){
+        addVideoJSPlayerButton();
+    }
     //check for other players
     //TODO: add other players here
 }
@@ -89,5 +93,25 @@ function addYouTubeVideoButton() {
         button.appendChild(buttonImage);
         
         document.getElementsByClassName("ytp-right-controls")[0].appendChild(button);
+    }
+}
+
+function addVideoJSPlayerButton() {
+    var video = document.getElementsByTagName('video')[0];
+    if (video != null && document.getElementsByClassName('PiPifierButton').length == 0) {
+        var button = document.createElement("button");
+        button.className = "PiPifierButton vjs-control vjs-button";
+        button.title = "PiP (by PiPifier)";
+        button.onclick = function(){document.getElementsByTagName('video')[0].webkitSetPresentationMode('picture-in-picture');};
+        
+        
+        var buttonImage = document.createElement("img");
+        buttonImage.src = whiteSVG_Icon;
+        buttonImage.width = 16;
+        buttonImage.height = 30;
+        button.appendChild(buttonImage);
+        
+        var fullscreenButton = document.getElementsByClassName("vjs-fullscreen-control")[0];
+        fullscreenButton.parentNode.insertBefore(button, fullscreenButton);
     }
 }
