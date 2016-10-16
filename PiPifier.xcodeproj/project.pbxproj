@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		110895A31D54DCBE00BF3465 /* ExtensionStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */; };
-		11BE4A4C1D9D87D6002AC03D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11BE4A4B1D9D87D6002AC03D /* StoreKit.framework */; };
+		110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* StateManager.swift */; };
+		115B6C241DB38BD100AE9B6F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B6C231DB38BD100AE9B6F /* SettingsManager.swift */; };
+		115B6C251DB38BD100AE9B6F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B6C231DB38BD100AE9B6F /* SettingsManager.swift */; };
+		11B4E1B81DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */; };
+		11B4E1B91DB2F56C00007495 /* PiP_Toolbar_Icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */; };
 		11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5011D4EC0CD0041579B /* AppDelegate.swift */; };
 		11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5031D4EC0CD0041579B /* ViewController.swift */; };
 		11F1B5061D4EC0CD0041579B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5051D4EC0CD0041579B /* Assets.xcassets */; };
 		11F1B5091D4EC0CD0041579B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5071D4EC0CD0041579B /* Main.storyboard */; };
 		11F1B5171D4EC1010041579B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F1B5161D4EC1010041579B /* Cocoa.framework */; };
 		11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */; };
-		11F1B51E1D4EC1010041579B /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B51D1D4EC1010041579B /* SafariExtensionViewController.swift */; };
-		11F1B5211D4EC1010041579B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B51F1D4EC1010041579B /* SafariExtensionViewController.xib */; };
 		11F1B5241D4EC1010041579B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5231D4EC1010041579B /* script.js */; };
 		11F1B5291D4EC1010041579B /* PiPifier Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11F1B5141D4EC1010041579B /* PiPifier Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */; };
@@ -47,9 +48,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionStateManager.swift; sourceTree = "<group>"; };
-		11BE4A4B1D9D87D6002AC03D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		11BE4A4D1D9D960E002AC03D /* PiPifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier.entitlements; sourceTree = "<group>"; };
+		110895A21D54DCBE00BF3465 /* StateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		114E8EE41DB386E400C22D36 /* PiPifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier.entitlements; sourceTree = "<group>"; };
+		115B6C231DB38BD100AE9B6F /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = PiPifier/SettingsManager.swift; sourceTree = "<group>"; };
+		11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon_white.svg; sourceTree = "<group>"; };
+		11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon.svg; sourceTree = "<group>"; };
 		11F1B4FE1D4EC0CD0041579B /* PiPifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1B5011D4EC0CD0041579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F1B5031D4EC0CD0041579B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +63,6 @@
 		11F1B5161D4EC1010041579B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		11F1B51A1D4EC1010041579B /* PiPifier_Safari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier_Safari_Extension.entitlements; sourceTree = "<group>"; };
 		11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
-		11F1B51D1D4EC1010041579B /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
-		11F1B5201D4EC1010041579B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		11F1B5221D4EC1010041579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F1B5231D4EC1010041579B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PiP_Toolbar_Icon.pdf; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11BE4A4C1D9D87D6002AC03D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +90,7 @@
 		11F1B4F51D4EC0CC0041579B = {
 			isa = PBXGroup;
 			children = (
+				115B6C231DB38BD100AE9B6F /* SettingsManager.swift */,
 				11F1B5001D4EC0CD0041579B /* PiPifier */,
 				11F1B5181D4EC1010041579B /* PiPifier-Safari-Extension */,
 				11F1B5151D4EC1010041579B /* Frameworks */,
@@ -109,7 +110,7 @@
 		11F1B5001D4EC0CD0041579B /* PiPifier */ = {
 			isa = PBXGroup;
 			children = (
-				11BE4A4D1D9D960E002AC03D /* PiPifier.entitlements */,
+				114E8EE41DB386E400C22D36 /* PiPifier.entitlements */,
 				11F1B5011D4EC0CD0041579B /* AppDelegate.swift */,
 				11F1B5031D4EC0CD0041579B /* ViewController.swift */,
 				11F1B5051D4EC0CD0041579B /* Assets.xcassets */,
@@ -122,7 +123,6 @@
 		11F1B5151D4EC1010041579B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11BE4A4B1D9D87D6002AC03D /* StoreKit.framework */,
 				11F1B5161D4EC1010041579B /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -131,12 +131,12 @@
 		11F1B5181D4EC1010041579B /* PiPifier-Safari-Extension */ = {
 			isa = PBXGroup;
 			children = (
-				11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */,
-				110895A21D54DCBE00BF3465 /* ExtensionStateManager.swift */,
-				11F1B51D1D4EC1010041579B /* SafariExtensionViewController.swift */,
-				11F1B51F1D4EC1010041579B /* SafariExtensionViewController.xib */,
-				11F1B5221D4EC1010041579B /* Info.plist */,
+				11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */,
+				11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */,
 				11F1B5231D4EC1010041579B /* script.js */,
+				11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */,
+				110895A21D54DCBE00BF3465 /* StateManager.swift */,
+				11F1B5221D4EC1010041579B /* Info.plist */,
 				11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */,
 				11F1B5191D4EC1010041579B /* Supporting Files */,
 			);
@@ -206,10 +206,7 @@
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
-							com.apple.InAppPurchase = {
-								enabled = 1;
-							};
-							com.apple.Sandbox = {
+							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
 							};
 						};
@@ -219,6 +216,11 @@
 						DevelopmentTeam = AW9CBV6SY7;
 						DevelopmentTeamName = "Arno Appenzeller";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -255,7 +257,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F1B5211D4EC1010041579B /* SafariExtensionViewController.xib in Resources */,
+				11B4E1B81DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg in Resources */,
+				11B4E1B91DB2F56C00007495 /* PiP_Toolbar_Icon.svg in Resources */,
 				11F1B5241D4EC1010041579B /* script.js in Resources */,
 				11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */,
 			);
@@ -270,6 +273,7 @@
 			files = (
 				11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */,
 				11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */,
+				115B6C241DB38BD100AE9B6F /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,9 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F1B51E1D4EC1010041579B /* SafariExtensionViewController.swift in Sources */,
 				11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */,
-				110895A31D54DCBE00BF3465 /* ExtensionStateManager.swift in Sources */,
+				110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */,
+				115B6C251DB38BD100AE9B6F /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +304,6 @@
 				11F1B5081D4EC0CD0041579B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		11F1B51F1D4EC1010041579B /* SafariExtensionViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11F1B5201D4EC1010041579B /* Base */,
-			);
-			name = SafariExtensionViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

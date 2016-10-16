@@ -684,11 +684,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="PiPifier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="371"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="431"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="33e-sc-UXg">
-                                <rect key="frame" x="111" y="322" width="259" height="36"/>
+                                <rect key="frame" x="111" y="382" width="259" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Welcome to PiPifier" id="NdB-6a-MPH">
                                     <font key="font" metaFont="system" size="20"/>
@@ -697,9 +697,18 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJ0-zd-jnu">
-                                <rect key="frame" x="18" y="315" width="74" height="17"/>
+                                <rect key="frame" x="18" y="375" width="74" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Installation:" id="HYB-Cb-cuK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OIb-tc-EPs">
+                                <rect key="frame" x="18" y="141" width="58" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Settings:" id="yum-ef-1lT">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -715,7 +724,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Obc-X3-Ip6">
-                                <rect key="frame" x="83" y="290" width="316" height="17"/>
+                                <rect key="frame" x="83" y="350" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1. Open Safari and go to Preferences" id="MKT-gv-fcs">
                                     <font key="font" metaFont="system"/>
@@ -742,7 +751,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0e-LG-pGM">
-                                <rect key="frame" x="83" y="265" width="316" height="17"/>
+                                <rect key="frame" x="83" y="325" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2. Go to Extensions" id="v9u-hm-ADg">
                                     <font key="font" metaFont="system"/>
@@ -751,7 +760,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3iZ-rh-fNL">
-                                <rect key="frame" x="83" y="240" width="316" height="17"/>
+                                <rect key="frame" x="83" y="300" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="3. Enable PiPifier (If you don't see PiPifier and you" id="JPh-sD-UjK">
                                     <font key="font" metaFont="system"/>
@@ -760,7 +769,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-II-zvG">
-                                <rect key="frame" x="83" y="187" width="316" height="17"/>
+                                <rect key="frame" x="83" y="247" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="4. Choose View &gt; Customize Toolbar and drag " id="FQA-uC-nky">
                                     <font key="font" metaFont="system"/>
@@ -769,7 +778,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQZ-xN-8Dw">
-                                <rect key="frame" x="83" y="148" width="316" height="17"/>
+                                <rect key="frame" x="83" y="208" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="5. To use PiPifier just press the icon when you're" id="ap3-oM-QFu">
                                     <font key="font" metaFont="system"/>
@@ -778,7 +787,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pK1-0H-gxY">
-                                <rect key="frame" x="83" y="134" width="316" height="17"/>
+                                <rect key="frame" x="83" y="194" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="watching to an HTML5 video (Note: You need to" id="c6c-1Y-bvu">
                                     <font key="font" metaFont="system"/>
@@ -787,7 +796,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-HF-L5O">
-                                <rect key="frame" x="83" y="120" width="316" height="17"/>
+                                <rect key="frame" x="83" y="180" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="interact with the video once. If it's autoplaying " id="Bl3-Lg-Xf0">
                                     <font key="font" metaFont="system"/>
@@ -796,7 +805,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4UY-OJ-4Id">
-                                <rect key="frame" x="83" y="173" width="316" height="17"/>
+                                <rect key="frame" x="83" y="233" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="the PiPifier icon to your toolbar" id="Tbx-dn-tgL">
                                     <font key="font" metaFont="system"/>
@@ -805,7 +814,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b67-jC-4JC">
-                                <rect key="frame" x="83" y="226" width="316" height="17"/>
+                                <rect key="frame" x="83" y="286" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="built the app by yourself you need to sign it or " id="p74-GI-CwL">
                                     <font key="font" metaFont="system"/>
@@ -814,7 +823,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="not-C8-r97">
-                                <rect key="frame" x="83" y="212" width="316" height="17"/>
+                                <rect key="frame" x="83" y="272" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="choose Developer -&gt; Allow unsigned extensions)" id="9Z5-3d-54c">
                                     <font key="font" metaFont="system"/>
@@ -823,7 +832,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-BU-dQm">
-                                <rect key="frame" x="83" y="106" width="316" height="17"/>
+                                <rect key="frame" x="83" y="166" width="316" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="just pause and play again)" id="DzK-b2-gSh">
                                     <font key="font" metaFont="system"/>
@@ -846,16 +855,28 @@
                                 <rect key="frame" x="232" y="23" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Tu-hq-uWn">
+                                <rect key="frame" x="83" y="110" width="278" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Enable custom PiP button on popular sites" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="xkh-MJ-0Xz">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="customPiPButtonsButtonPressed:" target="XfG-lQ-9wD" id="8Ji-UN-TUu"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="activityInd" destination="vzF-fE-Mj7" id="Uwd-bs-6uG"/>
                         <outlet property="buyButton" destination="hBK-SJ-HEQ" id="dcN-Hz-9c2"/>
+                        <outlet property="customPiPButtonsButton" destination="4Tu-hq-uWn" id="Zsa-Bs-iAv"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="695.5"/>
+            <point key="canvasLocation" x="75" y="725.5"/>
         </scene>
     </scenes>
 </document>

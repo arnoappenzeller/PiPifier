@@ -8,85 +8,63 @@
 
 import SafariServices
 
+enum Message: String {
+	case videoFound, noVideoFound, shouldCustomPiPButtonsBeAdded
+}
+
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
-    var manualDeactivation = false
-    
-    let stateManager = ExtensionStateManager.sharedInstance
-
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]? = nil) {
-        switch messageName {
-        case "done":
-            NSLog("loading should be done")
-        case "noVideoFound":
-            NSLog("found no video on page")
-            stateManager.videoFound = false
-            SFSafariApplication.setToolbarItemsNeedUpdate()
-        case "videoFound":
-            stateManager.videoFound = true
-            SFSafariApplication.setToolbarItemsNeedUpdate()
-        default:
-            NSLog("unhandled Message")
-        }
+		guard let message = Message(rawValue: messageName) else {
+			NSLog("unhandled message")
+			return
+		}
+		
+		switch message {
+		case .videoFound:
+			updateState(of: page, videoFound: true)
+		case .noVideoFound:
+			updateState(of: page, videoFound: false)
+        case .shouldCustomPiPButtonsBeAdded:
+            checkForCustomPiPButtonSetting()
+		}
+	}
+    
+	
+	func updateState(of page: SFSafariPage, videoFound: Bool) {
+		StateManager.shared.videosFound[page] = videoFound
+		SFSafariApplication.setToolbarItemsNeedUpdate()
     }
-    
-    
-    func updateVideoFoundState(localVideoFound:Bool, on page:SFSafariPage){
-        page.getPropertiesWithCompletionHandler({
-            senderPageProperties in
-            
-            //get current active tab url
-            SFSafariApplication.getActiveWindow(completionHandler: {
-                $0?.getActiveTab(completionHandler: {
-                    $0?.getActivePage(completionHandler: {
-                        $0?.getPropertiesWithCompletionHandler({
-                            activeTabPagePropeties in
-                            if senderPageProperties?.url.absoluteString == activeTabPagePropeties?.url.absoluteString{
-                                self.updatePageState(localVideoFound: localVideoFound,senderPageURL: senderPageProperties!.url)
-                            }
-                            else{
-                            }
-                        })
-                    })
-                })
-            })
-        })
-    }
-    
-    func updatePageState(localVideoFound:Bool,senderPageURL:URL){
-        if localVideoFound{
-            stateManager.videoFound = true
-            SFSafariApplication.setToolbarItemsNeedUpdate()
-        }
-    }
-    
-    
+	
     override func toolbarItemClicked(in window: SFSafariWindow) {
-        // This method will be called when your toolbar item is clicked.
-        
-        SFSafariApplication.getActiveWindow(completionHandler: {activeWindow in
-            //acknowledge to espenbye for pointing out that this works in fullscreen as well
-            //see: https://github.com/arnoappenzeller/PiPifier/issues/4
-            activeWindow?.getActiveTab(completionHandler: {
-                $0?.getActivePage(completionHandler: {
-                    page in
-                    page?.dispatchMessageToScript(withName: "enablePiP", userInfo: nil)
-                })
-            })
-        })
+		// Credits to espenbye for pointing out that this works in fullscreen as well
+		// See: https://github.com/arnoappenzeller/PiPifier/issues/4
+		getActivePage {
+			$0?.dispatchMessageToScript(withName: "enablePiP", userInfo: nil)
+		}
     }
     
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping (Bool, String) -> Void) {
-        validationHandler(true,"")
-        
-        
-        // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
-
-    }
+		getActivePage {
+			guard let page = $0 else {return}
+            
+			let videoFound = StateManager.shared.videosFound[page] ?? false
+			validationHandler(videoFound, "")
+		}
+	}
+	
+	func getActivePage(completionHandler: @escaping (SFSafariPage?) -> Void) {
+		SFSafariApplication.getActiveWindow {$0?.getActiveTab {$0?.getActivePage(completionHandler: completionHandler)}}
+	}
     
+    //MARK: - customPiPButton methods
     
-    override func popoverViewController() -> SFSafariExtensionViewController {
-        return SafariExtensionViewController.shared
+    func checkForCustomPiPButtonSetting(){
+        if SettingsManager.shared.isCustomPiPButtonsEnabled{
+            getActivePage {
+                $0?.dispatchMessageToScript(withName: "addCustomPiPButtons", userInfo: nil)
+            }
+        }
     }
-
+	
 }

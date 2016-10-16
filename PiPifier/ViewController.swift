@@ -16,6 +16,8 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
     
     var productsArray: Array<SKProduct> = []
     
+    @IBOutlet weak var customPiPButtonsButton: NSButton!
+    
     @IBOutlet weak var activityInd: NSProgressIndicator!
     
     var transactionInProgress = false
@@ -32,8 +34,16 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
         
         SKPaymentQueue.default().add(self)
         //buyButton.isEnabled = true
+        
+        customPiPButtonsButton.state = SettingsManager.shared.isCustomPiPButtonsEnabled ? 1 : 0
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func customPiPButtonsButtonPressed(_ sender: AnyObject) {
+        let buttonState = (sender as! NSButton).state
+        SettingsManager.shared.isCustomPiPButtonsEnabled = buttonState == 1
+        
     }
     
     // MARK: - IAP stuff
@@ -160,5 +170,5 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
             }
         }
     }
-}
 
+}
