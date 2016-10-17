@@ -12,10 +12,8 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var customPiPButtonsButton: NSButton!
     
-    @IBAction func customPiPButtonsButtonPressed(_ sender: AnyObject) {
-        let buttonState = (sender as! NSButton).state
-        SettingsManager.shared.isCustomPiPButtonsEnabled = buttonState == 1
-        
+    @IBAction func customPiPButtonsButtonPressed(_ sender: NSButton) {
+        SettingsManager.shared.isCustomPiPButtonsEnabled = sender.state == 1
     }
     
     override func viewDidLoad() {

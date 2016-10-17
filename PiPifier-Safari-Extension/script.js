@@ -1,81 +1,88 @@
-//array of supported players on domains
-var isYoutube = ['youtube','youtu'];
-
-
 //image URLs
-var whiteSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white.svg'
-var blackSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon.svg'
+var whiteSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white.svg';
+var blackSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon.svg';
 
 safari.self.addEventListener("message", messageHandler); // Message recieved from Swift code
-window.onfocus = checkForVideo // Tab selected
+window.onfocus = checkForVideo; // Tab selected
 new MutationObserver(checkForVideo).observe(document, {subtree: true, childList: true}); // DOM changed
 
 
-function dispatchMessage(messageName) {
-	safari.extension.dispatchMessage(messageName);
+function dispatchMessage(messageName, parameters) {
+	safari.extension.dispatchMessage(messageName, parameters);
 }
 
 function messageHandler(event) {
     if (event.name === "enablePiP" && getVideo() != null) {
-        getVideo().webkitSetPresentationMode('picture-in-picture');
-    }
-    else if (event.name === "addCustomPiPButtons"){
-        checkForCustomPiPButtonSupport();
+		enablePiP();
+    } else if (event.name === "addCustomPiPButtons") {
+		addCustomPiPButtons();
     }
 }
 
 function checkForVideo() {
-	if (window != window.top) return;
-	if (getVideo() != null) {
-		console.log("Found a video");
-		shouldCustomPiPButtonsBeAdded();
-		dispatchMessage("videoFound");
-	} else {
-		console.log("Found no video on top");
-		dispatchMessage("noVideoFound");
+	var found = getVideo() != null;
+	if (found) {
+		dispatchMessage("addCustomPiPButtonsIfNeeded");
 	}
+	console.log("Video " + (found ? "" : "not ") + "found");
+	dispatchMessage("videoCheck", {'found': found, 'iframe': window != window.top});
 }
 
 function getVideo() {
 	return document.getElementsByTagName('video')[0];
 }
 
+function enablePiP() {
+	getVideo().webkitSetPresentationMode('picture-in-picture');
+}
 
 //----------------- Custom Button Methods -----------------
 
-function shouldCustomPiPButtonsBeAdded(){
-    dispatchMessage("shouldCustomPiPButtonsBeAdded");
-}
+var players = [
+	{name: "YouTube", shouldAddButton: shouldAddYouTubePiPButton, addButton: addYouTubePiPButton},
+	{name: "Netflix", shouldAddButton: shouldAddNetflixPiPButton, addButton: addNetflixPiPButton},
+	//TODO: add other players here
+];
 
-function checkForCustomPiPButtonSupport(){
-    //add custom eventListener for youtube
-    if (isYoutube.map(function(obj){return location.hostname.match(obj) != null;}).indexOf(true) >= 0){
-        addYouTubeVideoButton();
-    }
-    //check for other players
-    //TODO: add other players here
+function addCustomPiPButtons() {
+	for (const player of players) {
+		if (player.shouldAddButton()) {
+			console.log("Adding button to player: " + player.name);
+			player.addButton();
+		}
+	}
 }
-
 
 //----------------- Player Implementations -------------------------
-function addYouTubeVideoButton() {
-    var video = document.getElementsByTagName('video')[0];
-    
-    
-    if (video != null && document.getElementsByClassName('PiPifierButton').length == 0) {
-        var button = document.createElement("button");
-        button.className = "ytp-button PiPifierButton";
-        button.title = "PiP (by PiPifier)";
-        button.onclick = function(){document.getElementsByTagName('video')[0].webkitSetPresentationMode('picture-in-picture');};
-        //TODO add style
-        //button.style.backgroundImage = 'url('+ whiteSVG_Icon + ')';
-        
-        var buttonImage = document.createElement("img");
-        buttonImage.src = whiteSVG_Icon;
-        buttonImage.width = 22;
-        buttonImage.height = 36;
-        button.appendChild(buttonImage);
-        
-        document.getElementsByClassName("ytp-right-controls")[0].appendChild(button);
-    }
+
+function shouldAddYouTubePiPButton() {
+	return location.hostname.match(/^(www\.)?youtube\.com|youtu\.be$/)
+		&& document.getElementsByClassName("ytp-right-controls").length > 0
+		&& document.getElementsByClassName('PiPifierButton').length == 0;
+}
+		
+function addYouTubePiPButton() {
+	var button = document.createElement("button");
+	button.className = "ytp-button PiPifierButton";
+	button.title = "PiP (by PiPifier)";
+	button.onclick = enablePiP;
+	//TODO add style
+	//button.style.backgroundImage = 'url('+ whiteSVG_Icon + ')';
+	var buttonImage = document.createElement("img");
+	buttonImage.src = whiteSVG_Icon;
+	buttonImage.width = 22;
+	buttonImage.height = 36;
+	button.appendChild(buttonImage);
+	
+	document.getElementsByClassName("ytp-right-controls")[0].appendChild(button);
+}
+
+
+function shouldAddNetflixPiPButton() {
+	//TODO: method stub
+	return false;
+}
+
+function addNetflixPiPButton() {
+	//TODO: method stub
 }
