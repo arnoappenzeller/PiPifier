@@ -9,7 +9,7 @@
 import SafariServices
 
 enum Message: String {
-	case videoCheck, addCustomPiPButtonsIfNeeded
+	case videoCheck, checkIfPiPEnabled
 }
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
@@ -25,8 +25,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 			NSLog("INFO: videoCheck: \(userInfo?["found"] as? Bool ?? false)")
 			StateManager.shared.videosFound[page] = userInfo?["found"] as? Bool ?? false
 			SFSafariApplication.setToolbarItemsNeedUpdate()
-        case .addCustomPiPButtonsIfNeeded:
-            addCustomPiPButtonsIfNeeded()
+        case .checkIfPiPEnabled:
+            checkIfPiPEnabled(callback: userInfo?["callback"] as? String)
 		}
 	}
 	
@@ -41,6 +41,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping (Bool, String) -> Void) {
 		getActivePage {
 			guard let page = $0 else {return}
+			NSLog("INFO: videosFound: \(StateManager.shared.videosFound)")
+			NSLog("INFO: video found: \(StateManager.shared.videosFound[page])")
 			let videoFound = StateManager.shared.videosFound[page] ?? false
 			NSLog("INFO: validating toolbarItem: \(videoFound)")
 			validationHandler(videoFound, "")
@@ -53,10 +55,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     //MARK: - customPiPButton methods
     
-    func addCustomPiPButtonsIfNeeded() {
-		guard SettingsManager.shared.isCustomPiPButtonsEnabled else {return}
+	func checkIfPiPEnabled(callback: String?) {
+		guard let callback = callback, SettingsManager.shared.isCustomPiPButtonsEnabled else {return}
 		getActivePage {
-			$0?.dispatchMessageToScript(withName: "addCustomPiPButtons", userInfo: nil)
+			$0?.dispatchMessageToScript(withName: "addCustomPiPButtonToPlayer", userInfo: ["callback": callback])
 		}
     }
 	
