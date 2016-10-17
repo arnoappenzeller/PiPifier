@@ -20,7 +20,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 			return
 		}
 		NSLog("INFO: recieved message: \(message)")
-		guard userInfo?["iframe"] as? Bool != true else {return}
 		switch message {
 		case .videoCheck:
 			NSLog("INFO: videoCheck: \(userInfo?["found"] as? Bool ?? false)")
