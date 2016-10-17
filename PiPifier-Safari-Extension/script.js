@@ -68,6 +68,10 @@ function checkForCustomPiPButtonSupport(){
     else if(document.getElementsByClassName('vjs-control-bar').length > 0){
         addVideoJSPlayerButton();
     }
+    //check for netflix
+    else if (location.hostname.match('netflix') != null){
+        addNetflixPlayerButton(0);
+    }
     //check for other players
     //TODO: add other players here
 }
@@ -113,5 +117,38 @@ function addVideoJSPlayerButton() {
         
         var fullscreenButton = document.getElementsByClassName("vjs-fullscreen-control")[0];
         fullscreenButton.parentNode.insertBefore(button, fullscreenButton);
+    }
+}
+
+function addNetflixPlayerButton(timeOutCounter) {
+    var video = document.getElementsByTagName('video')[0];
+    if (video != null && document.getElementsByClassName('PiPifierButton').length == 0) {
+        var button = document.createElement("button");
+        button.className = "PiPifierButton";
+        button.title = "PiP (by PiPifier)";
+        button.onclick = function(){document.getElementsByTagName('video')[0].webkitSetPresentationMode('picture-in-picture');};
+        button.height = 27;
+        button.width = 24;
+        button.style.backgroundColor = "transparent";
+        button.style.border = "none";
+        button.style.height = "100%";
+        
+        var buttonImage = document.createElement("img");
+        buttonImage.src = whiteSVG_Icon;
+        buttonImage.width = 15;
+        buttonImage.height = 27;
+        buttonImage.style.verticalAlign = "middle";
+        button.appendChild(buttonImage);
+        
+        var playerStatusDiv = document.getElementsByClassName("player-status")[0];
+        
+        if (playerStatusDiv == null && timeOutCounter < 3) {
+            //this is needed because the div is sometimes not reachable on the first load
+            console.log("Timeout needed");
+            //also necessary to count up and stop at some time to avoid endless loop on main netflix page
+            setTimeout(function() {addNetflixPlayerButton(timeOutCounter+1);}, 3000);
+            return;
+        }
+        playerStatusDiv.insertBefore(button, playerStatusDiv.firstChild);
     }
 }
