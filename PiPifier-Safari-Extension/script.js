@@ -51,14 +51,15 @@ function enablePiP() {
 //----------------- Custom Button Methods -----------------
 
 var players = [
-	{name: "YouTube", shouldAddButton: shouldAddYouTubePiPButton, addButton: addYouTubePiPButton},
-	{name: "Netflix", shouldAddButton: shouldAddNetflixPiPButton, addButton: addNetflixPiPButton},
+	{name: "YouTube", shouldAddButton: shouldAddYouTubeButton, addButton: addYouTubeButton},
+	{name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
+	{name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: function() {addNetflixButton(0)}},
 	//TODO: add other players here
 ];
 
 function addCustomPiPButtons() {
 	for (const player of players) {
-		if (player.shouldAddButton()) {
+		if (player.shouldAddButton() && document.getElementsByClassName('PiPifierButton').length == 0) {
 			console.log("Adding button to player: " + player.name);
 			player.addButton();
 		}
@@ -67,13 +68,12 @@ function addCustomPiPButtons() {
 
 //----------------- Player Implementations -------------------------
 
-function shouldAddYouTubePiPButton() {
-	return location.hostname.match(/^(www\.)?youtube\.com|youtu\.be$/)
-		&& document.getElementsByClassName("ytp-right-controls").length > 0
-		&& document.getElementsByClassName('PiPifierButton').length == 0;
+function shouldAddYouTubeButton() {
+	return location.hostname.match(/^(www\.)?youtube\.com$/)
+		&& document.getElementsByClassName("ytp-right-controls").length > 0;
 }
 		
-function addYouTubePiPButton() {
+function addYouTubeButton() {
 	var button = document.createElement("button");
 	button.className = "ytp-button PiPifierButton";
 	button.title = "PiP (by PiPifier)";
@@ -90,11 +90,52 @@ function addYouTubePiPButton() {
 }
 
 
-function shouldAddNetflixPiPButton() {
-	//TODO: method stub
-	return false;
+function shouldAddVideoJSButton() {
+	return document.getElementsByClassName('vjs-control-bar').length > 0;
 }
 
-function addNetflixPiPButton() {
-	//TODO: method stub
+function addVideoJSButton() {
+	var button = document.createElement("button");
+	button.className = "PiPifierButton vjs-control vjs-button";
+	button.title = "PiP (by PiPifier)";
+	button.onclick = enablePiP;
+	var buttonImage = document.createElement("img");
+	buttonImage.src = whiteSVG_Icon;
+	buttonImage.width = 16;
+	buttonImage.height = 30;
+	button.appendChild(buttonImage);
+	var fullscreenButton = document.getElementsByClassName("vjs-fullscreen-control")[0];
+	fullscreenButton.parentNode.insertBefore(button, fullscreenButton);
+}
+
+
+function shouldAddNetflixButton() {
+	return location.hostname.match('netflix');
+}
+
+function addNetflixButton(timeOutCounter) {
+	var button = document.createElement("button");
+	button.className = "PiPifierButton";
+	button.title = "PiP (by PiPifier)";
+	button.onclick = enablePiP;
+	button.height = 27;
+	button.width = 24;
+	button.style.backgroundColor = "transparent";
+	button.style.border = "none";
+	button.style.height = "100%";
+	var buttonImage = document.createElement("img");
+	buttonImage.src = whiteSVG_Icon;
+	buttonImage.width = 15;
+	buttonImage.height = 27;
+	buttonImage.style.verticalAlign = "middle";
+	button.appendChild(buttonImage);
+	var playerStatusDiv = document.getElementsByClassName("player-status")[0];
+	if (playerStatusDiv == null && timeOutCounter < 3) {
+		//this is needed because the div is sometimes not reachable on the first load
+		console.log("Timeout needed");
+		//also necessary to count up and stop at some time to avoid endless loop on main netflix page
+		setTimeout(function() {addNetflixPlayerButton(timeOutCounter+1);}, 3000);
+		return;
+	}
+	playerStatusDiv.insertBefore(button, playerStatusDiv.firstChild);
 }
