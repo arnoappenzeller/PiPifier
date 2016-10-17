@@ -9,7 +9,7 @@
 import SafariServices
 
 enum Message: String {
-	case videoCheck, checkIfPiPEnabled
+	case videoCheck, pipCheck
 }
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
@@ -25,8 +25,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 			NSLog("INFO: videoCheck: \(userInfo?["found"] as? Bool ?? false)")
 			StateManager.shared.videosFound[page] = userInfo?["found"] as? Bool ?? false
 			SFSafariApplication.setToolbarItemsNeedUpdate()
-        case .checkIfPiPEnabled:
-            checkIfPiPEnabled(callback: userInfo?["callback"] as? String)
+        case .pipCheck:
+            pipCheck(callback: userInfo?["callback"])
 		}
 	}
 	
@@ -55,7 +55,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     //MARK: - customPiPButton methods
     
-	func checkIfPiPEnabled(callback: String?) {
+	func pipCheck(callback: Any?) {
 		guard let callback = callback, SettingsManager.shared.isCustomPiPButtonsEnabled else {return}
 		getActivePage {
 			$0?.dispatchMessageToScript(withName: "addCustomPiPButtonToPlayer", userInfo: ["callback": callback])

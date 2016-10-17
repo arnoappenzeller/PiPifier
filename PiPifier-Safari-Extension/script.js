@@ -53,9 +53,9 @@ function enablePiP() {
 //----------------- Custom Button Methods -----------------
 
 var players = [
-	{name: "YouTube", shouldAddButton: shouldAddYouTubeButton, addButton: "addYouTubeButton"},
-	{name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: "addVideoJSButton"},
-	{name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: "addNetflixButton"},
+	{name: "YouTube", shouldAddButton: shouldAddYouTubeButton, addButton: addYouTubeButton},
+	{name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
+	{name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
 	//TODO: add other players here
 ];
 
@@ -63,7 +63,7 @@ function addCustomPiPButtons() {
 	for (const player of players) {
 		if (player.shouldAddButton()) {
 			console.log("Adding button to player: " + player.name);
-			dispatchMessage("checkIfPiPEnabled", {callback: player.addButton}) //Sets the callback to the player's addButton
+			dispatchMessage("pipCheck", {callback: player.addButton.name}) //Sets the callback to the player's addButton
 		}
 	}
 }
