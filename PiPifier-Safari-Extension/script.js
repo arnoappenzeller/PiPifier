@@ -53,13 +53,13 @@ function enablePiP() {
 var players = [
 	{name: "YouTube", shouldAddButton: shouldAddYouTubeButton, addButton: addYouTubeButton},
 	{name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
-	{name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: function() {addNetflixButton(0)}},
+	{name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
 	//TODO: add other players here
 ];
 
 function addCustomPiPButtons() {
 	for (const player of players) {
-		if (player.shouldAddButton() && document.getElementsByClassName('PiPifierButton').length == 0) {
+		if (player.shouldAddButton()) {
 			console.log("Adding button to player: " + player.name);
 			player.addButton();
 		}
@@ -70,7 +70,8 @@ function addCustomPiPButtons() {
 
 function shouldAddYouTubeButton() {
 	return location.hostname.match(/^(www\.)?youtube\.com$/)
-		&& document.getElementsByClassName("ytp-right-controls").length > 0;
+		&& document.getElementsByClassName("ytp-right-controls").length > 0
+		&& document.getElementsByClassName('PiPifierButton').length == 0;
 }
 		
 function addYouTubeButton() {
@@ -91,7 +92,8 @@ function addYouTubeButton() {
 
 
 function shouldAddVideoJSButton() {
-	return document.getElementsByClassName('vjs-control-bar').length > 0;
+	return document.getElementsByClassName('vjs-control-bar').length > 0
+		&& document.getElementsByClassName('PiPifierButton').length == 0;
 }
 
 function addVideoJSButton() {
@@ -110,10 +112,12 @@ function addVideoJSButton() {
 
 
 function shouldAddNetflixButton() {
-	return location.hostname.match('netflix');
+	return location.hostname.match('netflix')
+		&& document.getElementsByClassName('PiPifierButton').length == 0;
 }
 
 function addNetflixButton(timeOutCounter) {
+	if (timeOutCounter == null) timeOutCounter = 0;
 	var button = document.createElement("button");
 	button.className = "PiPifierButton";
 	button.title = "PiP (by PiPifier)";
@@ -134,7 +138,9 @@ function addNetflixButton(timeOutCounter) {
 		//this is needed because the div is sometimes not reachable on the first load
 		console.log("Timeout needed");
 		//also necessary to count up and stop at some time to avoid endless loop on main netflix page
-		setTimeout(function() {addNetflixPlayerButton(timeOutCounter+1);}, 3000);
+		setTimeout(function() {
+			if (shouldAddNetflixButton()) addNetflixButton(timeOutCounter+1);
+		}, 3000);
 		return;
 	}
 	playerStatusDiv.insertBefore(button, playerStatusDiv.firstChild);
