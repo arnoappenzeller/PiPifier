@@ -71,8 +71,9 @@ function addCustomPiPButtons() {
 //----------------- Player Implementations -------------------------
 
 function shouldAddYouTubeButton() {
-	return location.hostname.match(/^(www\.)?youtube\.com$/)
-		&& document.getElementsByClassName("ytp-right-controls").length > 0
+    //check if on youtube or player is embedded
+	return (location.hostname.match(/^(www\.)?youtube\.com$/)
+		|| document.getElementsByClassName("ytp-right-controls").length > 0)
 		&& document.getElementsByClassName('PiPifierButton').length == 0;
 }
 		
@@ -131,12 +132,13 @@ function addNetflixButton(timeOutCounter) {
 	button.width = 24;
 	button.style.backgroundColor = "transparent";
 	button.style.border = "none";
-	button.style.height = "100%";
-	var buttonImage = document.createElement("img");
+	button.style.maxHeight = "inherit";
+    button.style.width = "70px";
+     button.style.marginRight = "2px";
+    var buttonImage = document.createElement("img");
 	buttonImage.src = whiteSVG_Icon;
-	buttonImage.width = 15;
-	buttonImage.height = 27;
 	buttonImage.style.verticalAlign = "middle";
+    buttonImage.style.maxHeight = "40%";
 	button.appendChild(buttonImage);
 	var playerStatusDiv = document.getElementsByClassName("player-status")[0];
 	if (playerStatusDiv == null && timeOutCounter < 3) {
