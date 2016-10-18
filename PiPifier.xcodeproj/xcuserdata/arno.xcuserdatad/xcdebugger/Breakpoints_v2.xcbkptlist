@@ -4,6 +4,7 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+<<<<<<< HEAD
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "No"
@@ -325,10 +326,14 @@
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+=======
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+>>>>>>> master
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "PiPifier/ViewController.swift"
             timestampString = "498311186.993409"
             startingColumnNumber = "9223372036854775807"
@@ -641,6 +646,10 @@
             endingLineNumber = "118"
             landmarkName = "productsRequest(_:didReceive:)"
             landmarkType = "7">
+=======
+            scope = "0"
+            stopOnStyle = "0">
+>>>>>>> master
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

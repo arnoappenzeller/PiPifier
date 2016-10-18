@@ -849,6 +849,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="buyMeATea:" target="XfG-lQ-9wD" id="1yB-oq-t1B"/>
+                                    <action selector="customPiPButtonsButtonPressed:" target="XfG-lQ-9wD" id="PQX-iK-0id"/>
                                 </connections>
                             </button>
                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="vzF-fE-Mj7">

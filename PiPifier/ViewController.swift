@@ -17,7 +17,6 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
     var productsArray: Array<SKProduct> = []
     
     @IBOutlet weak var customPiPButtonsButton: NSButton!
-    
     @IBOutlet weak var activityInd: NSProgressIndicator!
     
     var transactionInProgress = false
@@ -40,10 +39,9 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func customPiPButtonsButtonPressed(_ sender: AnyObject) {
-        let buttonState = (sender as! NSButton).state
-        SettingsManager.shared.isCustomPiPButtonsEnabled = buttonState == 1
-        
+
+    @IBAction func customPiPButtonsButtonPressed(_ sender: NSButton) {
+        SettingsManager.shared.isCustomPiPButtonsEnabled = sender.state == 1
     }
     
     // MARK: - IAP stuff
