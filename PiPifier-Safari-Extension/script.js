@@ -128,8 +128,6 @@ function addNetflixButton(timeOutCounter) {
 	button.className = "PiPifierButton";
 	button.title = "PiP (by PiPifier)";
 	button.onclick = enablePiP;
-	button.height = 27;
-	button.width = 24;
 	button.style.backgroundColor = "transparent";
 	button.style.border = "none";
 	button.style.maxHeight = "inherit";
