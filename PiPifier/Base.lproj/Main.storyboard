@@ -212,7 +212,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="customPiPButtonsButtonPressed:" target="XfG-lQ-9wD" id="19y-j1-htK"/>
+                                    <action selector="customPiPButtonsButtonPressed:" target="XfG-lQ-9wD" id="PQX-iK-0id"/>
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alM-Rc-oOk">

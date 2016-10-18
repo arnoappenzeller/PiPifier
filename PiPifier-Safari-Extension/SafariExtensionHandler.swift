@@ -9,32 +9,26 @@
 import SafariServices
 
 enum Message: String {
-	case videoFound, noVideoFound, shouldCustomPiPButtonsBeAdded
+	case videoCheck, pipCheck
 }
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
-    
+	
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]? = nil) {
 		guard let message = Message(rawValue: messageName) else {
-			NSLog("unhandled message")
+			NSLog("INFO: unhandled message")
 			return
 		}
-		
+		NSLog("INFO: recieved message: \(message)")
 		switch message {
-		case .videoFound:
-			updateState(of: page, videoFound: true)
-		case .noVideoFound:
-			updateState(of: page, videoFound: false)
-        case .shouldCustomPiPButtonsBeAdded:
-            checkForCustomPiPButtonSetting()
+		case .videoCheck:
+			NSLog("INFO: videoCheck: \(userInfo?["found"] as? Bool ?? false)")
+			StateManager.shared.videosFound[page] = userInfo?["found"] as? Bool ?? false
+			SFSafariApplication.setToolbarItemsNeedUpdate()
+        case .pipCheck:
+            pipCheck(callback: userInfo?["callback"])
 		}
 	}
-    
-	
-	func updateState(of page: SFSafariPage, videoFound: Bool) {
-		StateManager.shared.videosFound[page] = videoFound
-		SFSafariApplication.setToolbarItemsNeedUpdate()
-    }
 	
     override func toolbarItemClicked(in window: SFSafariWindow) {
 		// Credits to espenbye for pointing out that this works in fullscreen as well
@@ -47,8 +41,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping (Bool, String) -> Void) {
 		getActivePage {
 			guard let page = $0 else {return}
-            
+			NSLog("INFO: videosFound: \(StateManager.shared.videosFound)")
+			NSLog("INFO: video found: \(StateManager.shared.videosFound[page])")
 			let videoFound = StateManager.shared.videosFound[page] ?? false
+			NSLog("INFO: validating toolbarItem: \(videoFound)")
 			validationHandler(videoFound, "")
 		}
 	}
@@ -59,12 +55,11 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     //MARK: - customPiPButton methods
     
-    func checkForCustomPiPButtonSetting(){
-        if SettingsManager.shared.isCustomPiPButtonsEnabled{
-            getActivePage {
-                $0?.dispatchMessageToScript(withName: "addCustomPiPButtons", userInfo: nil)
-            }
-        }
+	func pipCheck(callback: Any?) {
+		guard let callback = callback, SettingsManager.shared.isCustomPiPButtonsEnabled else {return}
+		getActivePage {
+			$0?.dispatchMessageToScript(withName: "addCustomPiPButtonToPlayer", userInfo: ["callback": callback])
+		}
     }
 	
 }
