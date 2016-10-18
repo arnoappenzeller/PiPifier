@@ -6,7 +6,6 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string></string>
 		<string>$(TeamIdentifierPrefix)group.APPenzeller.PiPifier</string>
 	</array>
 </dict>
