@@ -43,6 +43,9 @@ function checkForVideo() {
 }
 
 function getVideo() {
+	if (location.hostname === "www.hulu.com") {
+		return document.getElementById('content-video-player');
+	}
 	return document.getElementsByTagName('video')[0];
 }
 
@@ -76,7 +79,7 @@ function shouldAddYouTubeButton() {
 		|| document.getElementsByClassName("ytp-right-controls").length > 0)
 		&& document.getElementsByClassName('PiPifierButton').length == 0;
 }
-		
+
 function addYouTubeButton() {
 	if (!shouldAddYouTubeButton()) return;
 	var button = document.createElement("button");
@@ -90,7 +93,7 @@ function addYouTubeButton() {
 	buttonImage.width = 22;
 	buttonImage.height = 36;
 	button.appendChild(buttonImage);
-	
+
 	document.getElementsByClassName("ytp-right-controls")[0].appendChild(button);
 }
 
