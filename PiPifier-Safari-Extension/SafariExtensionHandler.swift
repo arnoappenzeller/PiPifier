@@ -13,6 +13,8 @@ enum Message: String {
 }
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
+    
+    let settingsManager = SettingsManager.shared
 	
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]? = nil) {
 		guard let message = Message(rawValue: messageName) else {
@@ -56,10 +58,14 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     //MARK: - customPiPButton methods
     
 	func pipCheck(callback: Any?) {
-		guard let callback = callback, SettingsManager.shared.isCustomPiPButtonsEnabled else {return}
-		getActivePage {
-			$0?.dispatchMessageToScript(withName: "addCustomPiPButtonToPlayer", userInfo: ["callback": callback])
-		}
+        print("Is settings manager enabled: \(settingsManager.isCustomPiPButtonsEnabled)")
+        if settingsManager.isCustomPiPButtonsEnabled {
+            if let callback = callback{
+                getActivePage {
+                    $0?.dispatchMessageToScript(withName: "addCustomPiPButtonToPlayer", userInfo: ["callback": callback])
+                }
+            }
+        }
     }
 	
 }
