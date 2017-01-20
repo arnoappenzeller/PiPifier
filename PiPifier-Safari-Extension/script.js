@@ -56,6 +56,7 @@ var players = [
                {name: "YouTube", shouldAddButton: shouldAddYouTubeButton, addButton: addYouTubeButton},
                {name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
                {name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
+               {name: "Wistia", shouldAddButton: shouldAddWistiaButton, addButton: addWistiaButton},
                //TODO: add other players here
                ];
 
@@ -100,6 +101,7 @@ function shouldAddVideoJSButton() {
     && document.getElementsByClassName('PiPifierButton').length == 0;
 }
 
+
 function addVideoJSButton() {
     if (!shouldAddVideoJSButton()) return;
     var button = document.createElement("button");
@@ -113,6 +115,27 @@ function addVideoJSButton() {
     button.appendChild(buttonImage);
     var fullscreenButton = document.getElementsByClassName("vjs-fullscreen-control")[0];
     fullscreenButton.parentNode.insertBefore(button, fullscreenButton);
+}
+
+function shouldAddWistiaButton() {
+    return document.getElementsByClassName('wistia_playbar').length > 0
+    && document.getElementsByClassName('PiPifierButton').length == 0;
+}
+
+function addWistiaButton() {
+    if (!shouldAddWistiaButton()) return;
+    var button = document.createElement("button");
+    button.className = "PiPifierButton w-control w-control--fullscreen w-is-visible";
+    button.alt = "Picture in Picture";
+    button.title = "PiP (by PiPifier)";
+    button.onclick = enablePiP;
+    var buttonImage = document.createElement("img");
+    buttonImage.src = whiteSVG_Icon;
+    buttonImage.width = 28;
+    buttonImage.height = 18;
+    buttonImage.style.verticalAlign = "middle";
+    button.appendChild(buttonImage);
+    document.getElementsByClassName("w-control-bar__region--airplay")[0].appendChild(button);
 }
 
 
