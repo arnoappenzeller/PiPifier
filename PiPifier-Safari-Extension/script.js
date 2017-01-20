@@ -10,8 +10,6 @@ window.onfocus = function() {
 new MutationObserver(checkForVideo).observe(document, {subtree: true, childList: true}); // DOM changed
 
 function dispatchMessage(messageName, parameters) {
-	console.log("message: " + messageName);
-	console.log("found: " + parameters.found);
 	safari.extension.dispatchMessage(messageName, parameters);
 }
 
@@ -29,13 +27,11 @@ function checkForVideo() {
 	if (getVideo() != null) {
 		addCustomPiPButtons();
 		if (previousResult === null || previousResult === false) {
-			console.log("Video found");
 			dispatchMessage("videoCheck", {found: true});
 		}
 		previousResult = true;
 	} else if (window == window.top) {
 		if (previousResult === null || previousResult === true) {
-			console.log("Video not found");
 			dispatchMessage("videoCheck", {found: false});
 		}
 		previousResult = false;
@@ -62,7 +58,6 @@ var players = [
 function addCustomPiPButtons() {
 	for (const player of players) {
 		if (player.shouldAddButton()) {
-			console.log("Adding button to player: " + player.name);
 			dispatchMessage("pipCheck", {callback: player.addButton.name}) //Sets the callback to the player's addButton
 		}
 	}
@@ -141,7 +136,6 @@ function addNetflixButton(timeOutCounter) {
 	var playerStatusDiv = document.getElementsByClassName("player-status")[0];
 	if (playerStatusDiv == null && timeOutCounter < 3) {
 		//this is needed because the div is sometimes not reachable on the first load
-		console.log("Timeout needed");
 		//also necessary to count up and stop at some time to avoid endless loop on main netflix page
 		setTimeout(function() {addNetflixButton(timeOutCounter+1);}, 3000);
 		return;
