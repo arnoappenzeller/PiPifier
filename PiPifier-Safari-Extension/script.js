@@ -53,6 +53,7 @@ var players = [
 	{name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
 	{name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
 	{name: "Wistia", shouldAddButton: shouldAddWistiaButton, addButton: addWistiaButton},
+    //{name: "Twitch", shouldAddButton: shouldAddTwitchButton, addButton: addTwitchButton},
 	//TODO: add other players here
 ];
 
@@ -110,6 +111,31 @@ function addWistiaButton() {
     button.appendChild(buttonImage);
     document.getElementsByClassName("w-control-bar__region--airplay")[0].appendChild(button);
 }
+
+/*
+function shouldAddTwitchButton() {
+    console.log("add twitch");
+    return (location.hostname == "www.twitch.tv") && document.getElementsByClassName('PiPifierButton').length == 0;
+}
+
+function addTwitchButton() {
+    if (!shouldAddTwitchButton()) return;
+    console.log("adding twitch");
+    var button = document.createElement("button");
+    button.className = "PiPifierButton player-button";
+    button.alt = "Picture in Picture";
+    button.title = "PiP (by PiPifier)";
+    button.onclick = enablePiP;
+    var buttonImage = document.createElement("img");
+    buttonImage.src = whiteSVG_Icon;
+    buttonImage.width = 28;
+    buttonImage.height = 18;
+    buttonImage.style.verticalAlign = "middle";
+    button.appendChild(buttonImage);
+    //add before fullscreen Button
+    var fullscreenButton = document.getElementsByClassName("player-button--fullscreen")[0];
+    fullscreenButton.parentNode.insertBefore(button, fullscreenButton);
+}*/
 
 
 function shouldAddVideoJSButton() {
