@@ -84,8 +84,8 @@ function addYouTubeButton() {
 	//button.style.backgroundImage = 'url('+ whiteSVG_Icon + ')';
 	var buttonImage = document.createElement("img");
 	buttonImage.src = whiteSVG_Icon;
-	buttonImage.width = 22;
-	buttonImage.height = 36;
+	buttonImage.width = "65%";
+	buttonImage.height = "100%";
 	button.appendChild(buttonImage);
 	
 	document.getElementsByClassName("ytp-right-controls")[0].appendChild(button);
