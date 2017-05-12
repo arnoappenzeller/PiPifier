@@ -38,8 +38,64 @@ function checkForVideo() {
 	}
 }
 
+var videoFound = false;
+var iframeFound = false;
+var iframeAccessible = false;
+var foundVideoElement;
+var iframes = document.getElementsByTagName('iframe'); // Get initial set of iframes on the page
+function checkIframeAccess( ifr ) {
+    var key = ( +new Date ) + "" + Math.random();
+
+    try {
+        var global = ifr.contentWindow;
+        global[key] = "asd";
+        return global[key] === "asd";
+    }
+    catch( e ) {
+        return false;
+    }
+}
+
+function checkIframeForVideo(){
+	for(iframe of iframes) {
+		if(checkIframeAccess(iframe) === false){
+			videoFound = false;
+			iframeFound = false;
+		}else if(!videoFound){
+			iframeFound = true;
+			console.log('iFrame Found');
+			if(iframe.contentDocument.getElementsByTagName('video').length>0){
+				videoFound = true;
+				console.log('Video Found');
+				foundVideoElement = iframe.contentDocument.getElementsByTagName('video')[0];
+				break;
+			}
+			if(iframe.contentDocument.getElementsByTagName('iframe').length>0){ // Check for a potentially nested iframe which then might have a video in it
+				iframeFound = true;
+				console.log('Nested iFrame Found');
+				iframes = iframe.contentDocument.getElementsByTagName('iframe'); // Set global iframes variable to this new nested set of iframes
+				if(!checkIframeForVideo()){
+					return checkIframeForVideo();
+				}
+			}
+		}
+	}
+	if(videoFound){
+		return foundVideoElement;
+	}else{
+		return false;
+	}
+}
+
 function getVideo() {
-	return document.getElementsByTagName('video')[0];
+	if(document.getElementsByTagName('video').length>0){
+		return document.getElementsByTagName('video')[0];
+	}else{
+		if(!checkIframeForVideo()){
+			return checkIframeForVideo();
+		}
+	}
+	return false;
 }
 
 function enablePiP() {
