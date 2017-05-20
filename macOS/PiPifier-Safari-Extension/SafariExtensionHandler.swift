@@ -44,7 +44,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 		getActivePage {
 			guard let page = $0 else {return}
 			NSLog("INFO: videosFound: \(StateManager.shared.videosFound)")
-			NSLog("INFO: video found: \(StateManager.shared.videosFound[page])")
+			NSLog("INFO: video found: \(String(describing: StateManager.shared.videosFound[page]))")
 			let videoFound = StateManager.shared.videosFound[page] ?? false
 			NSLog("INFO: validating toolbarItem: \(videoFound)")
 			validationHandler(videoFound, "")
