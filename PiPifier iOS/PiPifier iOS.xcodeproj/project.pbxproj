@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1177FEF41EC254370061D175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177FEF31EC254370061D175 /* AppDelegate.swift */; };
+		1177FEF61EC254370061D175 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177FEF51EC254370061D175 /* ViewController.swift */; };
+		1177FEF91EC254370061D175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1177FEF71EC254370061D175 /* Main.storyboard */; };
+		1177FEFB1EC254370061D175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177FEFA1EC254370061D175 /* Assets.xcassets */; };
+		1177FEFE1EC254370061D175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1177FEFC1EC254370061D175 /* LaunchScreen.storyboard */; };
+		1177FF0C1EC256860061D175 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177FF0B1EC256860061D175 /* ActionRequestHandler.swift */; };
+		1177FF121EC256860061D175 /* PiPifier.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1177FF091EC256860061D175 /* PiPifier.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1177FF181EC26B960061D175 /* PiPifierExtensionJavaScript.js in Resources */ = {isa = PBXBuildFile; fileRef = 1177FF171EC26B960061D175 /* PiPifierExtensionJavaScript.js */; };
+		1177FF1A1EC27CA70061D175 /* TemplateAppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177FF191EC27CA70061D175 /* TemplateAppIcon.xcassets */; };
+		11B525F11ECE04510064BA96 /* RoundRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B525F01ECE04510064BA96 /* RoundRectButton.swift */; };
+		11B525F41ECF2C1B0064BA96 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B525F31ECF2C1B0064BA96 /* MessageUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1177FF101EC256860061D175 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1177FEE81EC254370061D175 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1177FF081EC256860061D175;
+			remoteInfo = PiPifier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1177FF161EC256860061D175 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1177FF121EC256860061D175 /* PiPifier.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1177FEF01EC254370061D175 /* PiPifier iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PiPifier iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1177FEF31EC254370061D175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1177FEF51EC254370061D175 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1177FEF81EC254370061D175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1177FEFA1EC254370061D175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1177FEFD1EC254370061D175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1177FEFF1EC254370061D175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1177FF091EC256860061D175 /* PiPifier.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PiPifier.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1177FF0B1EC256860061D175 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		1177FF0F1EC256860061D175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1177FF171EC26B960061D175 /* PiPifierExtensionJavaScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PiPifierExtensionJavaScript.js; sourceTree = "<group>"; };
+		1177FF191EC27CA70061D175 /* TemplateAppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TemplateAppIcon.xcassets; sourceTree = "<group>"; };
+		11B525F01ECE04510064BA96 /* RoundRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectButton.swift; sourceTree = "<group>"; };
+		11B525F31ECF2C1B0064BA96 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1177FEED1EC254370061D175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B525F41ECF2C1B0064BA96 /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1177FF061EC256860061D175 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1177FEE71EC254370061D175 = {
+			isa = PBXGroup;
+			children = (
+				1177FEF21EC254370061D175 /* PiPifier iOS */,
+				1177FF0A1EC256860061D175 /* PiPifier */,
+				1177FEF11EC254370061D175 /* Products */,
+				11B525F21ECF2C1B0064BA96 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1177FEF11EC254370061D175 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1177FEF01EC254370061D175 /* PiPifier iOS.app */,
+				1177FF091EC256860061D175 /* PiPifier.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1177FEF21EC254370061D175 /* PiPifier iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1177FEF31EC254370061D175 /* AppDelegate.swift */,
+				1177FEF51EC254370061D175 /* ViewController.swift */,
+				1177FEF71EC254370061D175 /* Main.storyboard */,
+				11B525F01ECE04510064BA96 /* RoundRectButton.swift */,
+				1177FEFA1EC254370061D175 /* Assets.xcassets */,
+				1177FEFC1EC254370061D175 /* LaunchScreen.storyboard */,
+				1177FEFF1EC254370061D175 /* Info.plist */,
+			);
+			path = "PiPifier iOS";
+			sourceTree = "<group>";
+		};
+		1177FF0A1EC256860061D175 /* PiPifier */ = {
+			isa = PBXGroup;
+			children = (
+				1177FF0B1EC256860061D175 /* ActionRequestHandler.swift */,
+				1177FF171EC26B960061D175 /* PiPifierExtensionJavaScript.js */,
+				1177FF191EC27CA70061D175 /* TemplateAppIcon.xcassets */,
+				1177FF0F1EC256860061D175 /* Info.plist */,
+			);
+			path = PiPifier;
+			sourceTree = "<group>";
+		};
+		11B525F21ECF2C1B0064BA96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11B525F31ECF2C1B0064BA96 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1177FEEF1EC254370061D175 /* PiPifier iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1177FF021EC254370061D175 /* Build configuration list for PBXNativeTarget "PiPifier iOS" */;
+			buildPhases = (
+				1177FEEC1EC254370061D175 /* Sources */,
+				1177FEED1EC254370061D175 /* Frameworks */,
+				1177FEEE1EC254370061D175 /* Resources */,
+				1177FF161EC256860061D175 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1177FF111EC256860061D175 /* PBXTargetDependency */,
+			);
+			name = "PiPifier iOS";
+			productName = "PiPifier iOS";
+			productReference = 1177FEF01EC254370061D175 /* PiPifier iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1177FF081EC256860061D175 /* PiPifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1177FF131EC256860061D175 /* Build configuration list for PBXNativeTarget "PiPifier" */;
+			buildPhases = (
+				1177FF051EC256860061D175 /* Sources */,
+				1177FF061EC256860061D175 /* Frameworks */,
+				1177FF071EC256860061D175 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PiPifier;
+			productName = PiPifier;
+			productReference = 1177FF091EC256860061D175 /* PiPifier.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1177FEE81EC254370061D175 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = APPenzeller;
+				TargetAttributes = {
+					1177FEEF1EC254370061D175 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = AW9CBV6SY7;
+						ProvisioningStyle = Automatic;
+					};
+					1177FF081EC256860061D175 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = AW9CBV6SY7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1177FEEB1EC254370061D175 /* Build configuration list for PBXProject "PiPifier iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1177FEE71EC254370061D175;
+			productRefGroup = 1177FEF11EC254370061D175 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1177FEEF1EC254370061D175 /* PiPifier iOS */,
+				1177FF081EC256860061D175 /* PiPifier */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1177FEEE1EC254370061D175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1177FEFE1EC254370061D175 /* LaunchScreen.storyboard in Resources */,
+				1177FEFB1EC254370061D175 /* Assets.xcassets in Resources */,
+				1177FEF91EC254370061D175 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1177FF071EC256860061D175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1177FF1A1EC27CA70061D175 /* TemplateAppIcon.xcassets in Resources */,
+				1177FF181EC26B960061D175 /* PiPifierExtensionJavaScript.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1177FEEC1EC254370061D175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1177FEF61EC254370061D175 /* ViewController.swift in Sources */,
+				11B525F11ECE04510064BA96 /* RoundRectButton.swift in Sources */,
+				1177FEF41EC254370061D175 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1177FF051EC256860061D175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1177FF0C1EC256860061D175 /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1177FF111EC256860061D175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1177FF081EC256860061D175 /* PiPifier */;
+			targetProxy = 1177FF101EC256860061D175 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1177FEF71EC254370061D175 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1177FEF81EC254370061D175 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1177FEFC1EC254370061D175 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1177FEFD1EC254370061D175 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1177FF001EC254370061D175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1177FF011EC254370061D175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1177FF031EC254370061D175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = "PiPifier iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1177FF041EC254370061D175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = "PiPifier iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1177FF141EC256860061D175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = TemplateAppIcon;
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = PiPifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS.PiPifier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1177FF151EC256860061D175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = TemplateAppIcon;
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = PiPifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS.PiPifier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1177FEEB1EC254370061D175 /* Build configuration list for PBXProject "PiPifier iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1177FF001EC254370061D175 /* Debug */,
+				1177FF011EC254370061D175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1177FF021EC254370061D175 /* Build configuration list for PBXNativeTarget "PiPifier iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1177FF031EC254370061D175 /* Debug */,
+				1177FF041EC254370061D175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1177FF131EC256860061D175 /* Build configuration list for PBXNativeTarget "PiPifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1177FF141EC256860061D175 /* Debug */,
+				1177FF151EC256860061D175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1177FEE81EC254370061D175 /* Project object */;
+}

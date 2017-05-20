@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110895A21D54DCBE00BF3465 /* StateManager.swift */; };
+		115B6C241DB38BD100AE9B6F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B6C231DB38BD100AE9B6F /* SettingsManager.swift */; };
+		115B6C251DB38BD100AE9B6F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B6C231DB38BD100AE9B6F /* SettingsManager.swift */; };
+		11B4E1B81DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */; };
+		11B4E1B91DB2F56C00007495 /* PiP_Toolbar_Icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */; };
+		11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5011D4EC0CD0041579B /* AppDelegate.swift */; };
+		11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B5031D4EC0CD0041579B /* ViewController.swift */; };
+		11F1B5061D4EC0CD0041579B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5051D4EC0CD0041579B /* Assets.xcassets */; };
+		11F1B5091D4EC0CD0041579B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5071D4EC0CD0041579B /* Main.storyboard */; };
+		11F1B5171D4EC1010041579B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F1B5161D4EC1010041579B /* Cocoa.framework */; };
+		11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */; };
+		11F1B5241D4EC1010041579B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5231D4EC1010041579B /* script.js */; };
+		11F1B5291D4EC1010041579B /* PiPifier Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11F1B5141D4EC1010041579B /* PiPifier Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11F1B5271D4EC1010041579B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F1B4F61D4EC0CC0041579B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11F1B5131D4EC1010041579B;
+			remoteInfo = "PiPifier-Safari-Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11F1B52D1D4EC1010041579B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				11F1B5291D4EC1010041579B /* PiPifier Button.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		110895A21D54DCBE00BF3465 /* StateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		114E8EE41DB386E400C22D36 /* PiPifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier.entitlements; sourceTree = "<group>"; };
+		115B6C231DB38BD100AE9B6F /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = PiPifier/SettingsManager.swift; sourceTree = "<group>"; };
+		11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon_white.svg; sourceTree = "<group>"; };
+		11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PiP_Toolbar_Icon.svg; sourceTree = "<group>"; };
+		11F1B4FE1D4EC0CD0041579B /* PiPifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiPifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F1B5011D4EC0CD0041579B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11F1B5031D4EC0CD0041579B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11F1B5051D4EC0CD0041579B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11F1B5081D4EC0CD0041579B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11F1B50A1D4EC0CD0041579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11F1B5141D4EC1010041579B /* PiPifier Button.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PiPifier Button.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F1B5161D4EC1010041579B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		11F1B51A1D4EC1010041579B /* PiPifier_Safari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiPifier_Safari_Extension.entitlements; sourceTree = "<group>"; };
+		11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		11F1B5221D4EC1010041579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11F1B5231D4EC1010041579B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PiP_Toolbar_Icon.pdf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11F1B4FB1D4EC0CC0041579B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11F1B5111D4EC1010041579B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F1B5171D4EC1010041579B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11F1B4F51D4EC0CC0041579B = {
+			isa = PBXGroup;
+			children = (
+				115B6C231DB38BD100AE9B6F /* SettingsManager.swift */,
+				11F1B5001D4EC0CD0041579B /* PiPifier */,
+				11F1B5181D4EC1010041579B /* PiPifier-Safari-Extension */,
+				11F1B5151D4EC1010041579B /* Frameworks */,
+				11F1B4FF1D4EC0CD0041579B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11F1B4FF1D4EC0CD0041579B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11F1B4FE1D4EC0CD0041579B /* PiPifier.app */,
+				11F1B5141D4EC1010041579B /* PiPifier Button.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11F1B5001D4EC0CD0041579B /* PiPifier */ = {
+			isa = PBXGroup;
+			children = (
+				114E8EE41DB386E400C22D36 /* PiPifier.entitlements */,
+				11F1B5011D4EC0CD0041579B /* AppDelegate.swift */,
+				11F1B5031D4EC0CD0041579B /* ViewController.swift */,
+				11F1B5051D4EC0CD0041579B /* Assets.xcassets */,
+				11F1B5071D4EC0CD0041579B /* Main.storyboard */,
+				11F1B50A1D4EC0CD0041579B /* Info.plist */,
+			);
+			path = PiPifier;
+			sourceTree = "<group>";
+		};
+		11F1B5151D4EC1010041579B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11F1B5161D4EC1010041579B /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11F1B5181D4EC1010041579B /* PiPifier-Safari-Extension */ = {
+			isa = PBXGroup;
+			children = (
+				11B4E1B61DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg */,
+				11B4E1B71DB2F56C00007495 /* PiP_Toolbar_Icon.svg */,
+				11F1B5231D4EC1010041579B /* script.js */,
+				11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */,
+				110895A21D54DCBE00BF3465 /* StateManager.swift */,
+				11F1B5221D4EC1010041579B /* Info.plist */,
+				11F1B5301D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf */,
+				11F1B5191D4EC1010041579B /* Supporting Files */,
+			);
+			path = "PiPifier-Safari-Extension";
+			sourceTree = "<group>";
+		};
+		11F1B5191D4EC1010041579B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11F1B51A1D4EC1010041579B /* PiPifier_Safari_Extension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11F1B4FD1D4EC0CC0041579B /* PiPifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11F1B50D1D4EC0CD0041579B /* Build configuration list for PBXNativeTarget "PiPifier" */;
+			buildPhases = (
+				11F1B4FA1D4EC0CC0041579B /* Sources */,
+				11F1B4FB1D4EC0CC0041579B /* Frameworks */,
+				11F1B4FC1D4EC0CC0041579B /* Resources */,
+				11F1B52D1D4EC1010041579B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11F1B5281D4EC1010041579B /* PBXTargetDependency */,
+			);
+			name = PiPifier;
+			productName = PiPifier;
+			productReference = 11F1B4FE1D4EC0CD0041579B /* PiPifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11F1B5131D4EC1010041579B /* PiPifier Button */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11F1B52A1D4EC1010041579B /* Build configuration list for PBXNativeTarget "PiPifier Button" */;
+			buildPhases = (
+				11F1B5101D4EC1010041579B /* Sources */,
+				11F1B5111D4EC1010041579B /* Frameworks */,
+				11F1B5121D4EC1010041579B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PiPifier Button";
+			productName = "PiPifier-Safari-Extension";
+			productReference = 11F1B5141D4EC1010041579B /* PiPifier Button.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11F1B4F61D4EC0CC0041579B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = APPenzeller;
+				TargetAttributes = {
+					11F1B4FD1D4EC0CC0041579B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AW9CBV6SY7;
+						DevelopmentTeamName = "Arno Appenzeller";
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					11F1B5131D4EC1010041579B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AW9CBV6SY7;
+						DevelopmentTeamName = "Arno Appenzeller";
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 11F1B4F91D4EC0CC0041579B /* Build configuration list for PBXProject "PiPifier macOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11F1B4F51D4EC0CC0041579B;
+			productRefGroup = 11F1B4FF1D4EC0CD0041579B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11F1B4FD1D4EC0CC0041579B /* PiPifier */,
+				11F1B5131D4EC1010041579B /* PiPifier Button */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11F1B4FC1D4EC0CC0041579B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F1B5061D4EC0CD0041579B /* Assets.xcassets in Resources */,
+				11F1B5091D4EC0CD0041579B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11F1B5121D4EC1010041579B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11B4E1B81DB2F56C00007495 /* PiP_Toolbar_Icon_white.svg in Resources */,
+				11B4E1B91DB2F56C00007495 /* PiP_Toolbar_Icon.svg in Resources */,
+				11F1B5241D4EC1010041579B /* script.js in Resources */,
+				11F1B5311D4F5DDE0041579B /* PiP_Toolbar_Icon.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11F1B4FA1D4EC0CC0041579B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F1B5041D4EC0CD0041579B /* ViewController.swift in Sources */,
+				11F1B5021D4EC0CD0041579B /* AppDelegate.swift in Sources */,
+				115B6C241DB38BD100AE9B6F /* SettingsManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11F1B5101D4EC1010041579B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */,
+				110895A31D54DCBE00BF3465 /* StateManager.swift in Sources */,
+				115B6C251DB38BD100AE9B6F /* SettingsManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11F1B5281D4EC1010041579B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11F1B5131D4EC1010041579B /* PiPifier Button */;
+			targetProxy = 11F1B5271D4EC1010041579B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11F1B5071D4EC0CD0041579B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11F1B5081D4EC0CD0041579B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11F1B50B1D4EC0CD0041579B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11F1B50C1D4EC0CD0041579B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		11F1B50E1D4EC0CD0041579B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PiPifier/PiPifier.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = PiPifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.APPenzeller.PiPifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		11F1B50F1D4EC0CD0041579B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PiPifier/PiPifier.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = PiPifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.APPenzeller.PiPifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		11F1B52B1D4EC1010041579B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "PiPifier-Safari-Extension/PiPifier_Safari_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = "PiPifier-Safari-Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier.PiPifier-Safari-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		11F1B52C1D4EC1010041579B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "PiPifier-Safari-Extension/PiPifier_Safari_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = AW9CBV6SY7;
+				INFOPLIST_FILE = "PiPifier-Safari-Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier.PiPifier-Safari-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11F1B4F91D4EC0CC0041579B /* Build configuration list for PBXProject "PiPifier macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11F1B50B1D4EC0CD0041579B /* Debug */,
+				11F1B50C1D4EC0CD0041579B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11F1B50D1D4EC0CD0041579B /* Build configuration list for PBXNativeTarget "PiPifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11F1B50E1D4EC0CD0041579B /* Debug */,
+				11F1B50F1D4EC0CD0041579B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11F1B52A1D4EC1010041579B /* Build configuration list for PBXNativeTarget "PiPifier Button" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11F1B52B1D4EC1010041579B /* Debug */,
+				11F1B52C1D4EC1010041579B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11F1B4F61D4EC0CC0041579B /* Project object */;
+}
