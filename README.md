@@ -1,5 +1,5 @@
 
-![Banner](Images/Banner.png)
+![Banner](macOS/Images/Banner.png)
 # PiPifier
 PiPifier is a macOS 10.12 and iOS Safari (action) extension that lets you use every HTML5 video in Picture in Picture mode
 
@@ -11,7 +11,7 @@ It's free on the Mac AppStore. Get it [here](https://itunes.apple.com/app/pipifi
 ## How to use?
 If you have an HTML5 video playing on any website like Youtube just press the PiPifier icon in Safari's toolbar to enable Picture-In-Picture for this video. Make sure you did interact with the video player once before pressing (like play/pause).
 
-![Demo](Images/demo.gif "Demo")
+![Demo_macOS](macOS/Images/demo.gif "Demo macOS")
 
 ## Requirements
 For usage: macOS 10.12<br />
@@ -31,6 +31,8 @@ It will be free on the AppStore but for the moment it is build it by yourself
 
 ## How to use
 If you have an HTML5 video playing on any website like Youtube press the share button and select the 'Run PiPifier' Action Extension
+
+![Demo_iOS](macOS/Images/pipifier_ios_usage.gif "Demo iOS")
 
 ## Why?
 There are many sites that avoids you using iOS default video controls (YouTube for example) so you can't enable PiP mode. PiPifier lets you enable PiP regardless those limitations.
