@@ -27,7 +27,7 @@ For developement: Xcode 8
 
 # iOS
 ## Download
-It will be free on the AppStore but for the moment it is build it by yourself
+It's free on the AppStore. Get it [here](https://itunes.apple.com/app/pipifier-pip-for-every-web-video/id1234771095?mt=8)
 
 ## How to use
 If you have an HTML5 video playing on any website like Youtube press the share button and select the 'Run PiPifier' Action Extension
