@@ -31,12 +31,12 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate {
             mailComposer.mailComposeDelegate = self
             mailComposer.setToRecipients(["support@app-enzeller.com"])
             mailComposer.setSubject(NSLocalizedString("PiPifier iOS Feedback",comment: "pipifierFeedBackMailHeader"))
-            mailComposer.setMessageBody(NSLocalizedString("Hi, \n I have some feedback for PiPifier.",comment: "pipifierFeedBackMailContetn"), isHTML: false)
+            mailComposer.setMessageBody(NSLocalizedString("Hi, \n I have some feedback for PiPifier.",comment: "pipifierFeedBackMailContent"), isHTML: false)
             
             self.present(mailComposer, animated: true, completion: nil)
         }
         else{
-            let alert = UIAlertController(title: NSLocalizedString("Warning", comment: "warning"), message: NSLocalizedString("It looks like your device is not able to send a mail. Please check your settings and try again", comment: "mailError"), preferredStyle: .alert)
+            let alert = UIAlertController(title: NSLocalizedString("Warning", comment: "warning"), message: NSLocalizedString("It looks like your device is not able to send an email. Please check your settings and try again.", comment: "mailError"), preferredStyle: .alert)
             let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)

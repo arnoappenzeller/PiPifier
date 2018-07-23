@@ -61,7 +61,7 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
     }
     
     func doneWithVideoFound(videoFound:Bool) {
-        let resultsDictionary = [NSExtensionJavaScriptFinalizeArgumentKey: ["videoOnPage":videoFound ? 1 : 0, "errorMessage" : NSLocalizedString("No compatible video found.\n\nPlease note that if the video is an embedded video (like Youtube player on another site) this will only work on the main page", comment: "errorMessage")]]
+        let resultsDictionary = [NSExtensionJavaScriptFinalizeArgumentKey: ["videoOnPage":videoFound ? 1 : 0, "errorMessage" : NSLocalizedString("No compatible video found.\n\nPlease note that if the video is an embedded video (like a YouTube player on another site) this will only work on the main page.", comment: "errorMessage")]]
             
         let resultsProvider = NSItemProvider(item: resultsDictionary as NSDictionary, typeIdentifier: String(kUTTypePropertyList))
             

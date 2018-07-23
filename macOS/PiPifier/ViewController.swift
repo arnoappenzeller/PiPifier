@@ -19,13 +19,13 @@ class ViewController: NSViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customPiPButtonsButton.state = SettingsManager.shared.isCustomPiPButtonsEnabled ? 1 : 0
-
+        customPiPButtonsButton.state = NSControl.StateValue(rawValue: SettingsManager.shared.isCustomPiPButtonsEnabled ? 1 : 0)
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     @IBAction func customPiPButtonsButtonPressed(_ sender: NSButton) {
-        SettingsManager.shared.isCustomPiPButtonsEnabled = sender.state == 1
+        SettingsManager.shared.isCustomPiPButtonsEnabled = sender.state.rawValue == 1
     }
 }

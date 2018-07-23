@@ -13,7 +13,7 @@ class SettingsManager {
     static let shared = SettingsManager()
     private init() {}
     
-    //NOTE: replace with your own group identifier when developping for yourself
+    //NOTE: replace with your own group identifier when developing for yourself
     //Don't forget to change it in the entitlements as well otherwise it can cause crashes
     let sharedUserDefaults = UserDefaults(suiteName: "AW9CBV6SY7.group.APPenzeller.PiPifier")!
     
