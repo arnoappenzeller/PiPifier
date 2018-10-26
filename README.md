@@ -1,15 +1,15 @@
 
 ![Banner](macOS/Images/Banner.png)
 # PiPifier
-PiPifier is a macOS 10.12 and iOS Safari (action) extension that lets you use every HTML5 video in Picture in Picture mode
+PiPifier is a macOS 10.12 and iOS Safari (action) extension that lets you use every HTML5 video in Picture in Picture mode.
 
 
 # macOS
 ## Download
-It's free on the Mac AppStore. Get it [here](https://itunes.apple.com/app/pipifier-pip-for-nearly-every/id1160374471?mt=12)
+It's free on the Mac App Store. Get it [here](https://itunes.apple.com/app/pipifier-pip-for-nearly-every/id1160374471?mt=12).
 
 ## How to use?
-If you have an HTML5 video playing on any website like Youtube just press the PiPifier icon in Safari's toolbar to enable Picture-In-Picture for this video. Make sure you did interact with the video player once before pressing (like play/pause).
+If you have an HTML5 video playing on any website like Youtube just press the PiPifier icon in Safari's toolbar to enable Picture-In-Picture for this video. Make sure you did interact with the video player once before pressing (like play/pause.)
 
 ![Demo_macOS](macOS/Images/demo.gif "Demo macOS")
 
@@ -27,10 +27,10 @@ For developement: Xcode 8
 
 # iOS
 ## Download
-It's free on the AppStore. Get it [here](https://itunes.apple.com/app/pipifier-pip-for-every-web-video/id1234771095?mt=8)
+It's free on the App Store. Get it [here](https://itunes.apple.com/app/pipifier-pip-for-every-web-video/id1234771095?mt=8).
 
 ## How to use
-If you have an HTML5 video playing on any website like Youtube press the share button and select the 'Run PiPifier' Action Extension
+If you have an HTML5 video playing on any website (like YouTube), press the share button and select the 'Run PiPifier' Action Extension:
 
 ![Demo_iOS](macOS/Images/pipifier_ios_usage.gif "Demo iOS")
 
@@ -51,7 +51,7 @@ For developement: Xcode 8
 # How can I help?
 If you are a developer feel free to make any addition to improve PiPifier.
 
-If you are user and want a native PiP button in any video player please make a request in the corresponding [issue](https://github.com/arnoappenzeller/PiPifier/issues/12)
+If you are user and want a native PiP button in any video player please make a request in the corresponding [issue](https://github.com/arnoappenzeller/PiPifier/issues/12).
 
 # Note for developers
 The code is a bit dirty and there are some unused parts in it (Tried to add more features before I needed to focus on other things). If you want to help me clean it up feel free to do so :)
