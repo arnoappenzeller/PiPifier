@@ -3,7 +3,7 @@
 // @namespace    https://github.com/Willian-Zhang/PiPifier
 // @version      0.2
 // @description  PiPifier is an extension that lets you use every HTML5 video in Picture in Picture mode
-// @author       You
+// @author       @arno_app <https://twitter.com/arno_app>, @Cacauu_de <https://twitter.com/Cacauu_de>, @Willian <https://github.com/willian-zhang>
 // @match        */*
 // @grant        none
 // ==/UserScript==

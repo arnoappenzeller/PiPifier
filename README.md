@@ -48,6 +48,9 @@ For developement: Xcode 8
 4. Enable 'Run PiPifier'<br />
 5. Select 'Run PiPifier' on a website with a video
 
+# Userscript
+https://greasyfork.org/zh-TW/scripts/374160-pipifier
+
 # How can I help?
 If you are a developer feel free to make any addition to improve PiPifier.
 
@@ -57,4 +60,5 @@ If you are user and want a native PiP button in any video player please make a r
 The code is a bit dirty and there are some unused parts in it (Tried to add more features before I needed to focus on other things). If you want to help me clean it up feel free to do so :)
 
 # Contact
-Made by [@arno_app](https://twitter.com/arno_app) with an important bug fix by [@Cacauu_de](https://twitter.com/Cacauu_de).
+Made by [@arno_app](https://twitter.com/arno_app) with an important bug fix by [@Cacauu_de](https://twitter.com/Cacauu_de) 
+Userscript port & Chrome support: [Willian](https://github.com/willian-zhang)
