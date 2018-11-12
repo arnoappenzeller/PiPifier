@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PiPifier
 // @namespace    https://github.com/Willian-Zhang/PiPifier
-// @version      0.2
+// @version      0.3
 // @description  PiPifier is an extension that lets you use every HTML5 video in Picture in Picture mode
 // @author       @arno_app <https://twitter.com/arno_app>, @Cacauu_de <https://twitter.com/Cacauu_de>, @Willian <https://github.com/willian-zhang>
 // @match        */*
@@ -83,7 +83,7 @@ function checkForVideo() {
             //dispatchMessage("videoCheck", {found: true});
             console.warn("videoCheck", {found: true})
             videoCheck = {found: true}
-            enablePiP();
+            // enablePiP();
         }
         previousResult = true;
     } else if (window == window.top) {
