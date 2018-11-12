@@ -49,7 +49,7 @@ For developement: Xcode 8
 5. Select 'Run PiPifier' on a website with a video
 
 # Userscript
-https://greasyfork.org/zh-TW/scripts/374160-pipifier
+https://greasyfork.org/scripts/374160-pipifier
 
 # How can I help?
 If you are a developer feel free to make any addition to improve PiPifier.
