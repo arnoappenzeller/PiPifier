@@ -36,7 +36,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 		// Credits to espenbye for pointing out that this works in fullscreen as well
 		// See: https://github.com/arnoappenzeller/PiPifier/issues/4
 		getActivePage {
-			$0?.dispatchMessageToScript(withName: "enablePiP", userInfo: nil)
+			$0?.dispatchMessageToScript(withName: "togglePiP", userInfo: nil)
 		}
     }
     

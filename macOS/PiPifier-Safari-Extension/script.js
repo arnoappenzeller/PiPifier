@@ -14,8 +14,8 @@ function dispatchMessage(messageName, parameters) {
 }
 
 function messageHandler(event) {
-    if (event.name === "enablePiP" && getVideo() != null) {
-        enablePiP();
+    if (event.name === "togglePiP" && getVideo() != null) {
+        togglePiP();
     } else if (event.name === "addCustomPiPButtonToPlayer") {
         window[event.message.callback]() //Calls the function specified as callback
     }
@@ -42,8 +42,9 @@ function getVideo() {
     return document.getElementsByTagName('video')[0];
 }
 
-function enablePiP() {
-    getVideo().webkitSetPresentationMode('picture-in-picture');
+function togglePiP() {
+    const video = getVideo();
+    video.webkitSetPresentationMode(video.webkitPresentationMode === 'picture-in-picture' ? 'inline' : 'picture-in-picture');
 }
 
 //----------------- Custom Button Methods -----------------
@@ -78,7 +79,7 @@ function addYouTubeButton() {
     var button = document.createElement("button");
     button.className = "ytp-button PiPifierButton";
     button.title = "PiP (by PiPifier)";
-    button.onclick = enablePiP;
+    button.onclick = togglePiP;
     //TODO add style
     //button.style.backgroundImage = 'url('+ whiteSVG_Icon + ')';
     var buttonImage = document.createElement("img");
@@ -102,7 +103,7 @@ function addVideoJSButton() {
     var button = document.createElement("button");
     button.className = "PiPifierButton vjs-control vjs-button";
     button.title = "PiP (by PiPifier)";
-    button.onclick = enablePiP;
+    button.onclick = togglePiP;
     var buttonImage = document.createElement("img");
     buttonImage.src = whiteSVG_Icon;
     buttonImage.width = 16;
@@ -123,7 +124,7 @@ function addWistiaButton() {
     button.className = "PiPifierButton w-control w-control--fullscreen w-is-visible";
     button.alt = "Picture in Picture";
     button.title = "PiP (by PiPifier)";
-    button.onclick = enablePiP;
+    button.onclick = togglePiP;
     var buttonImage = document.createElement("img");
     buttonImage.src = whiteSVG_Icon;
     buttonImage.width = 28;
@@ -145,7 +146,7 @@ function addNetflixButton(timeOutCounter) {
     var button = document.createElement("button");
     button.className = "PiPifierButton";
     button.title = "PiP (by PiPifier)";
-    button.onclick = enablePiP;
+    button.onclick = togglePiP;
     button.style.backgroundColor = "transparent";
     button.style.border = "none";
     button.style.maxHeight = "inherit";
