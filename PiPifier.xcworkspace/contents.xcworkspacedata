@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PiPifier iOS/PiPifier iOS.xcodeproj">
+      location = "group:macOS/PiPifier macOS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/arno/Programmier_Projekte/PiPifier/macOS/PiPifier macOS.xcodeproj">
+      location = "group:PiPifier iOS/PiPifier iOS.xcodeproj">
    </FileRef>
 </Workspace>

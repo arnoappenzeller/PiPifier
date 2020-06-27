@@ -24,7 +24,7 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
         outer:
             for item in context.inputItems as! [NSExtensionItem] {
                 if let attachments = item.attachments {
-                    for itemProvider in attachments as! [NSItemProvider] {
+                    for itemProvider in attachments {
                         if itemProvider.hasItemConformingToTypeIdentifier(String(kUTTypePropertyList)) {
                             itemProvider.loadItem(forTypeIdentifier: String(kUTTypePropertyList), options: nil, completionHandler: { (item, error) in
                                 let dictionary = item as! [String: Any]

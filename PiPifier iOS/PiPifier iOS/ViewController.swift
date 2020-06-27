@@ -25,7 +25,6 @@ class ViewController: UIViewController,MFMailComposeViewControllerDelegate,SKPro
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //enableBuyButtonsWithPrice(prices: [0.99,1.99], currencySymbol: "$")
-        SKPaymentQueue.default().add(self)
         buyButtonLoadingState()
         requestProductInfo()
         
