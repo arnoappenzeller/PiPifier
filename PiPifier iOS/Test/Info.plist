@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Run PiPifier</string>
+	<string>Test</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,33 +17,20 @@
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(MARKETING_VERSION)</string>
+	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<string>1</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
-			<key>NSExtensionActivationRule</key>
-			<dict>
-				<key>NSExtensionActivationSupportsFileWithMaxCount</key>
-				<integer>0</integer>
-				<key>NSExtensionActivationSupportsImageWithMaxCount</key>
-				<integer>0</integer>
-				<key>NSExtensionActivationSupportsMovieWithMaxCount</key>
-				<integer>0</integer>
-				<key>NSExtensionActivationSupportsText</key>
-				<false/>
-				<key>NSExtensionActivationSupportsWebURLWithMaxCount</key>
-				<integer>1</integer>
-			</dict>
-			<key>NSExtensionJavaScriptPreprocessingFile</key>
-			<string>PiPifierExtensionJavaScript</string>
+			<key>QLSupportedContentTypes</key>
+			<array/>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.services</string>
+		<string>com.apple.quicklook.thumbnail</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).ActionRequestHandler</string>
+		<string>$(PRODUCT_MODULE_NAME).ThumbnailProvider</string>
 	</dict>
 </dict>
 </plist>

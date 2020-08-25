@@ -1,68 +1,68 @@
 {
   "images" : [
     {
-      "size" : "16x16",
+      "filename" : "Mac App 16pt.png",
       "idiom" : "mac",
-      "filename" : "icon-102416w.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "16x16"
     },
     {
-      "size" : "16x16",
+      "filename" : "Mac App 32pt-1.png",
       "idiom" : "mac",
-      "filename" : "icon-102432w.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "16x16"
     },
     {
-      "size" : "32x32",
+      "filename" : "Mac App 32pt.png",
       "idiom" : "mac",
-      "filename" : "icon-102432w-1.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "32x32"
     },
     {
-      "size" : "32x32",
+      "filename" : "Mac App 32pt@2x.png",
       "idiom" : "mac",
-      "filename" : "icon-102464w.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "32x32"
     },
     {
-      "size" : "128x128",
+      "filename" : "Mac App 128pt.png",
       "idiom" : "mac",
-      "filename" : "icon-1024128w.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "128x128"
     },
     {
-      "size" : "128x128",
+      "filename" : "Mac App 128pt@2x.png",
       "idiom" : "mac",
-      "filename" : "icon-1024256w.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "128x128"
     },
     {
-      "size" : "256x256",
+      "filename" : "Mac App 256pt.png",
       "idiom" : "mac",
-      "filename" : "icon-1024256w-1.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "256x256"
     },
     {
-      "size" : "256x256",
+      "filename" : "Mac App 256pt@2x.png",
       "idiom" : "mac",
-      "filename" : "icon-1024512w-1.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "256x256"
     },
     {
-      "size" : "512x512",
+      "filename" : "Mac App 512pt.png",
       "idiom" : "mac",
-      "filename" : "icon-1024512w.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "512x512"
     },
     {
-      "size" : "512x512",
+      "filename" : "Mac App 512pt@2x.png",
       "idiom" : "mac",
-      "filename" : "icon-10241024w.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "512x512"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

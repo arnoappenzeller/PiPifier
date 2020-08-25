@@ -18,9 +18,40 @@
 		1177FF1A1EC27CA70061D175 /* TemplateAppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177FF191EC27CA70061D175 /* TemplateAppIcon.xcassets */; };
 		11B525F11ECE04510064BA96 /* RoundRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B525F01ECE04510064BA96 /* RoundRectButton.swift */; };
 		11B525F41ECF2C1B0064BA96 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B525F31ECF2C1B0064BA96 /* MessageUI.framework */; };
+		11C9CB8624A4E57000ECA5CD /* MainViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9CB8524A4E57000ECA5CD /* MainViewSwiftUI.swift */; };
+		11C9CB8824A5038E00ECA5CD /* MainHostingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9CB8724A5038E00ECA5CD /* MainHostingVC.swift */; };
+		11F4652924A6B510001CBE4F /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4652824A6B510001CBE4F /* MailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		115E96C124A6C46E006CE112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F4657524A6C407001CBE4F /* PiPifier macOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F1B4FE1D4EC0CD0041579B;
+			remoteInfo = PiPifier;
+		};
+		115E96C324A6C46E006CE112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F4657524A6C407001CBE4F /* PiPifier macOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F1B5141D4EC1010041579B;
+			remoteInfo = "PiPifier Button";
+		};
+		115E96C724A6C46E006CE112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 115E96BC24A6C46E006CE112 /* PiPifier macOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F1B4FE1D4EC0CD0041579B;
+			remoteInfo = PiPifier;
+		};
+		115E96C924A6C46E006CE112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 115E96BC24A6C46E006CE112 /* PiPifier macOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F1B5141D4EC1010041579B;
+			remoteInfo = "PiPifier Button";
+		};
 		1177FF101EC256860061D175 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1177FEE81EC254370061D175 /* Project object */;
@@ -45,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		115E96BC24A6C46E006CE112 /* PiPifier macOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PiPifier macOS.xcodeproj"; path = "../macOS/PiPifier macOS.xcodeproj"; sourceTree = "<group>"; };
 		1177FEF01EC254370061D175 /* PiPifier iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PiPifier iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1177FEF31EC254370061D175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1177FEF51EC254370061D175 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +89,13 @@
 		1177FF0F1EC256860061D175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1177FF171EC26B960061D175 /* PiPifierExtensionJavaScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PiPifierExtensionJavaScript.js; sourceTree = "<group>"; };
 		1177FF191EC27CA70061D175 /* TemplateAppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TemplateAppIcon.xcassets; sourceTree = "<group>"; };
+		118AE3EC1ED82BB00062E11E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		11B525F01ECE04510064BA96 /* RoundRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectButton.swift; sourceTree = "<group>"; };
 		11B525F31ECF2C1B0064BA96 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		11C9CB8524A4E57000ECA5CD /* MainViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSwiftUI.swift; sourceTree = "<group>"; };
+		11C9CB8724A5038E00ECA5CD /* MainHostingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHostingVC.swift; sourceTree = "<group>"; };
+		11F4652824A6B510001CBE4F /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		11F4657524A6C407001CBE4F /* PiPifier macOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "PiPifier macOS.xcodeproj"; path = "../macOS/PiPifier macOS.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115E96BD24A6C46E006CE112 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				115E96C824A6C46E006CE112 /* PiPifier.app */,
+				115E96CA24A6C46E006CE112 /* PiPifier Button.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1177FEE71EC254370061D175 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +150,10 @@
 			children = (
 				1177FEF31EC254370061D175 /* AppDelegate.swift */,
 				1177FEF51EC254370061D175 /* ViewController.swift */,
+				11C9CB8524A4E57000ECA5CD /* MainViewSwiftUI.swift */,
+				11F4652724A6B4ED001CBE4F /* SwiftUI Representables */,
 				1177FEF71EC254370061D175 /* Main.storyboard */,
+				11C9CB8724A5038E00ECA5CD /* MainHostingVC.swift */,
 				11B525F01ECE04510064BA96 /* RoundRectButton.swift */,
 				1177FEFA1EC254370061D175 /* Assets.xcassets */,
 				1177FEFC1EC254370061D175 /* LaunchScreen.storyboard */,
@@ -127,9 +176,29 @@
 		11B525F21ECF2C1B0064BA96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11F4657524A6C407001CBE4F /* PiPifier macOS.xcodeproj */,
+				115E96BC24A6C46E006CE112 /* PiPifier macOS.xcodeproj */,
+				118AE3EC1ED82BB00062E11E /* StoreKit.framework */,
 				11B525F31ECF2C1B0064BA96 /* MessageUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11F4652724A6B4ED001CBE4F /* SwiftUI Representables */ = {
+			isa = PBXGroup;
+			children = (
+				11F4652824A6B510001CBE4F /* MailView.swift */,
+			);
+			path = "SwiftUI Representables";
+			sourceTree = "<group>";
+		};
+		11F4657624A6C407001CBE4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				115E96C224A6C46E006CE112 /* PiPifier.app */,
+				115E96C424A6C46E006CE112 /* PiPifier Button.appex */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,14 +246,19 @@
 		1177FEE81EC254370061D175 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = APPenzeller;
 				TargetAttributes = {
 					1177FEEF1EC254370061D175 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = AW9CBV6SY7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					1177FF081EC256860061D175 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -198,12 +272,23 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 1177FEE71EC254370061D175;
 			productRefGroup = 1177FEF11EC254370061D175 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 11F4657624A6C407001CBE4F /* Products */;
+					ProjectRef = 11F4657524A6C407001CBE4F /* PiPifier macOS.xcodeproj */;
+				},
+				{
+					ProductGroup = 115E96BD24A6C46E006CE112 /* Products */;
+					ProjectRef = 115E96BC24A6C46E006CE112 /* PiPifier macOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1177FEEF1EC254370061D175 /* PiPifier iOS */,
@@ -211,6 +296,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		115E96C224A6C46E006CE112 /* PiPifier.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PiPifier.app;
+			remoteRef = 115E96C124A6C46E006CE112 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		115E96C424A6C46E006CE112 /* PiPifier Button.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "PiPifier Button.appex";
+			remoteRef = 115E96C324A6C46E006CE112 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		115E96C824A6C46E006CE112 /* PiPifier.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PiPifier.app;
+			remoteRef = 115E96C724A6C46E006CE112 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		115E96CA24A6C46E006CE112 /* PiPifier Button.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "PiPifier Button.appex";
+			remoteRef = 115E96C924A6C46E006CE112 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1177FEEE1EC254370061D175 /* Resources */ = {
@@ -239,9 +355,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C9CB8824A5038E00ECA5CD /* MainHostingVC.swift in Sources */,
 				1177FEF61EC254370061D175 /* ViewController.swift in Sources */,
 				11B525F11ECE04510064BA96 /* RoundRectButton.swift in Sources */,
 				1177FEF41EC254370061D175 /* AppDelegate.swift in Sources */,
+				11C9CB8624A4E57000ECA5CD /* MainViewSwiftUI.swift in Sources */,
+				11F4652924A6B510001CBE4F /* MailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,21 +406,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -324,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -338,21 +467,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -369,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -383,12 +522,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = "PiPifier iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -397,40 +541,51 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = "PiPifier iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		1177FF141EC256860061D175 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = TemplateAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = PiPifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS.PiPifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		1177FF151EC256860061D175 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = TemplateAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = AW9CBV6SY7;
 				INFOPLIST_FILE = PiPifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.APPenzeller.PiPifier-iOS.PiPifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
