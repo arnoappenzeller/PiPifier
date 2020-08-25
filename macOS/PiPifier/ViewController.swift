@@ -33,15 +33,16 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
         
         SKPaymentQueue.default().add(self)
         //buyButton.isEnabled = true
+
         
-        customPiPButtonsButton.state = SettingsManager.shared.isCustomPiPButtonsEnabled ? 1 : 0
+        customPiPButtonsButton.state = SettingsManager.shared.isCustomPiPButtonsEnabled ? .on : .off
 
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func customPiPButtonsButtonPressed(_ sender: NSButton) {
-        SettingsManager.shared.isCustomPiPButtonsEnabled = sender.state == 1
+        SettingsManager.shared.isCustomPiPButtonsEnabled = sender.state == .on
     }
     
     // MARK: - IAP stuff
@@ -72,7 +73,7 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
         alert.informativeText = "Want to buy me a ☕️ of tea? 🙃"
         alert.alertStyle = .informational
         
-        if alert.runModal() == NSAlertFirstButtonReturn{
+        if alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn{
             let payment = SKPayment(product: self.productsArray[0] as SKProduct)
             SKPaymentQueue.default().add(payment)
             self.transactionInProgress = true
@@ -104,9 +105,11 @@ class ViewController: NSViewController,SKProductsRequestDelegate, SKPaymentTrans
                 productsArray.append(product )
             }
             let theProduct = productsArray[0]
+            DispatchQueue.main.async {
+                self.buyButton.title = "\(theProduct.localizedTitle) (\(theProduct.price)\(theProduct.priceLocale.currencySymbol!))"
+                self.buyButton.isEnabled = true
+            }
             
-            buyButton.title = "\(theProduct.localizedTitle) (\(theProduct.price)\(theProduct.priceLocale.currencySymbol!))"
-            buyButton.isEnabled = true
         }
             
         else {
