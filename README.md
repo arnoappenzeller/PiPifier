@@ -15,7 +15,7 @@ If you have an HTML5 video playing on any website like Youtube just press the Pi
 
 ## Requirements
 For usage: macOS 10.12<br />
-For developement: Xcode 8
+For developement: Latest Xcode
 
 ## Installation
 (0. Launch PiPifier)<br />
@@ -38,8 +38,8 @@ If you have an HTML5 video playing on any website like Youtube press the share b
 There are many sites that avoids you using iOS default video controls (YouTube for example) so you can't enable PiP mode. PiPifier lets you enable PiP regardless those limitations.
 
 ## Requirements
-For usage: iPad with iOS 10<br />
-For developement: Xcode 8
+For usage: iPad with iOS 10 or iPhone with iOS 14<br />
+For developement: Latest Xcode
 
 ## Installation
 1. Open Safari<br />
