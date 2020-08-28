@@ -39,7 +39,13 @@ function checkForVideo() {
 }
 
 function getVideo() {
-    return document.getElementsByTagName('video')[0];
+    var videos = document.getElementsByTagName('video');
+    if (videos.length < 2) return videos[0];
+    
+    for (i = 0; i < videos.length; ++i) {
+        if (!videos[i].paused) return videos[i];
+    }
+    return null;
 }
 
 function enablePiP() {
