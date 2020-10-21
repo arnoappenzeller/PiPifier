@@ -53,6 +53,7 @@ var players = [
                {name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
                {name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
                {name: "Wistia", shouldAddButton: shouldAddWistiaButton, addButton: addWistiaButton},
+               {name: "Twitch", shouldAddButton: shouldAddTwitchButton, addButton: addTwitchButton},
                //TODO: add other players here
                ];
 
@@ -164,4 +165,28 @@ function addNetflixButton(timeOutCounter) {
         return;
     }
     playerStatusDiv.insertBefore(button, playerStatusDiv.firstChild);
+}
+
+
+function shouldAddTwitchButton() {
+    return location.hostname.match('twitch')
+    && document.getElementsByClassName('PiPifierButton').length == 0;
+}
+
+
+function addTwitchButton(timeOutCounter) {
+    if (!shouldAddTwitchButton()) return;
+
+    var button = document.createElement("button");
+    button.className = "player-button PiPifierButton";
+    button.title = "PiP (by PiPifier)";
+    button.onclick = enablePiP;
+
+    var buttonImage = document.createElement("img");
+    buttonImage.src = whiteSVG_Icon;
+    buttonImage.width = 18;
+    buttonImage.height = 14;
+    button.appendChild(buttonImage);
+
+    document.getElementsByClassName("player-buttons-right")[0].appendChild(button);
 }
