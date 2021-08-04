@@ -42,7 +42,7 @@
 			<key>Identifier</key>
 			<string>Button</string>
 			<key>Image</key>
-			<string>PiP_Toolbar_Icon_new.pdf</string>
+			<string>PiP_Toolbar_Icon_new_big_sur.pdf</string>
 			<key>Label</key>
 			<string>PiPifier</string>
 		</dict>
