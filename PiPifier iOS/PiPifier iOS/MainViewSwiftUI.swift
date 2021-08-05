@@ -10,7 +10,6 @@ import SwiftUI
 import MessageUI
 
 
-
 func createButton(action:@escaping (()->()),text:String,isDisabled:Bool,isAlertPresenting:Binding<Bool>, alert:Alert) -> some View{
     return  Button(action: action) {Text(text)}
         .padding(.vertical, 3.0)
@@ -29,6 +28,7 @@ struct MainViewSwiftUI: View {
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
     @State var showButtonAlert = false
+
     
     var body: some View {
         ScrollView(.vertical){
@@ -74,36 +74,9 @@ struct MainViewSwiftUI: View {
                                 .frame(width: 200, height: 35, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         }
                     }
-                    VStack(spacing:10) {
-                        Text("About:")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                        Text("Pipifier is developed in the open and can be found on Github.")
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .padding()
-                        if UIDevice.current.userInterfaceIdiom == .pad {
-                            HStack(spacing:10) {
-                                if MFMailComposeViewController.canSendMail() {
-                                    createButton(action:  {self.isShowingMailView.toggle()}, text: "Send Email", isDisabled: false, isAlertPresenting: $showButtonAlert,alert: Alert(title: Text(NSLocalizedString("Thanks!", comment: "thanks")), message: Text(NSLocalizedString("Hey it's Arno.\n I want to say a big thank you! With your tip you support me developping more cool stuff for iOS and macOS.\n Thank you for making this possible ❤️", comment: "personal notice")), dismissButton: .default(Text("OK"))))
-                                }
-                            }
-                        }
-                        else{
-                            VStack(spacing:10) {
-                                if MFMailComposeViewController.canSendMail() {
-                                    createButton(action:  {self.isShowingMailView.toggle()}, text: "Send Email", isDisabled: false, isAlertPresenting: $showButtonAlert,alert: Alert(title: Text(NSLocalizedString("Thanks!", comment: "thanks")), message: Text(NSLocalizedString("Hey it's Arno.\n I want to say a big thank you! With your tip you support me developping more cool stuff for iOS and macOS.\n Thank you for making this possible ❤️", comment: "personal notice")), dismissButton: .default(Text("OK"))))
-                                }
-                                
-                            }
-                        }
-                    }
                 }
             }
         }
-        .sheet(isPresented: $isShowingMailView) {
-                    MailView(isShowing: self.$isShowingMailView, result: self.$result)
-                }
     }
 }
 

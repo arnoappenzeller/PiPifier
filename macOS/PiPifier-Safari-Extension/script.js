@@ -1,6 +1,6 @@
 //image URLs
-var whiteSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white.svg';
-var blackSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon.svg';
+var whiteSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white_new.svg';
+var blackSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_new.svg';
 
 safari.self.addEventListener("message", messageHandler); // Message recieved from Swift code
 window.onfocus = function() {

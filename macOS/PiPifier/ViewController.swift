@@ -33,6 +33,6 @@ class ViewController: NSViewController {
     @IBAction func customPiPButtonsButtonPressed(_ sender: NSButton) {
         SettingsManager.shared.isCustomPiPButtonsEnabled = sender.state == .on
     }
-    
+
 
 }
