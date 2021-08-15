@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>PiPifier-WebExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>PiPifier.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>1177FF081EC256860061D175</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>11FA076626C72A25006235D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

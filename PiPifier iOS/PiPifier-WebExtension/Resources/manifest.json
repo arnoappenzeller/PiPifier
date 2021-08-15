@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "default_locale": "en",
+
+    "name": "PiPifier",
+    "description": "__MSG_extension_description__",
+    "version": "1.0",
+
+    "icons": {
+        "48": "images/IconWebApp-48w.png",
+        "96": "images/IconWebApp-96w.png",
+        "128": "images/IconWebApp-128w.png",
+        "256": "images/IconWebApp-256w.png",
+        "512": "images/IconWebApp-512w.png"
+    },
+
+    "background": {
+        "scripts": [ "background.js" ],
+        "persistent": false
+    },
+
+
+    "browser_action": {
+        "default_icon": {
+            "16": "images/WebExtIcon-16w.png",
+            "19": "images/WebExtIcon-19w.png",
+            "32": "images/WebExtIcon-32w.png",
+            "38": "images/WebExtIcon-38w.png"
+        }
+    },
+
+    "permissions": ["activeTab"]
+}
