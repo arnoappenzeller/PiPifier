@@ -49,6 +49,7 @@ function enablePiP() {
 //----------------- Custom Button Methods -----------------
 
 var players = [
+              {name: "Xigua", shouldAddButton: shouldAddXiguaButton, addButton: addXiguaButton},
                {name: "YouTube", shouldAddButton: shouldAddYouTubeButton, addButton: addYouTubeButton},
                {name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
                {name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
@@ -65,6 +66,28 @@ function addCustomPiPButtons() {
 }
 
 //----------------- Player Implementations -------------------------
+
+function shouldAddXiguaButton() {
+  // check if on xigua
+  return location.hostname.match('ixigua')
+  && document.getElementsByClassName('PiPifierButton').length == 0;
+}
+
+function addXiguaButton() {
+  if (!shouldAddXiguaButton()) return;
+  var button = document.createElement("button");
+  button.className = "xgplayer-icon PiPifierButton";
+  button.title = "PiP (by PiPifier)";
+  button.onclick = enablePiP;
+  
+  var buttonImage = document.createElement("img");
+  buttonImage.src = whiteSVG_Icon;
+  buttonImage.width = 24;
+  buttonImage.height = 36;
+  button.appendChild(buttonImage);
+  
+  document.getElementsByClassName("xgplayer-controls")[0].appendChild(button);
+}
 
 function shouldAddYouTubeButton() {
     //check if on youtube or player is embedded
