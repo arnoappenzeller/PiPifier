@@ -2,6 +2,10 @@
 var whiteSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white_new.svg';
 var blackSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_new.svg';
 
+// xigua image URLs
+var whiteXiguaSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white_xigua.svg';
+var blackXiguaSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_xigua.svg';
+
 safari.self.addEventListener("message", messageHandler); // Message recieved from Swift code
 window.onfocus = function() {
     previousResult = null;
@@ -49,12 +53,12 @@ function enablePiP() {
 //----------------- Custom Button Methods -----------------
 
 var players = [
-              {name: "Xigua", shouldAddButton: shouldAddXiguaButton, addButton: addXiguaButton},
                {name: "YouTube", shouldAddButton: shouldAddYouTubeButton, addButton: addYouTubeButton},
                {name: "VideoJS", shouldAddButton: shouldAddVideoJSButton, addButton: addVideoJSButton},
                {name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
                {name: "Wistia", shouldAddButton: shouldAddWistiaButton, addButton: addWistiaButton},
                //TODO: add other players here
+               {name: "Xigua", shouldAddButton: shouldAddXiguaButton, addButton: addXiguaButton},
                ];
 
 function addCustomPiPButtons() {
@@ -81,7 +85,7 @@ function addXiguaButton() {
   button.onclick = enablePiP;
   
   var buttonImage = document.createElement("img");
-  buttonImage.src = whiteSVG_Icon;
+  buttonImage.src = whiteXiguaSVG_Icon;
   buttonImage.width = 24;
   buttonImage.height = 36;
   button.appendChild(buttonImage);

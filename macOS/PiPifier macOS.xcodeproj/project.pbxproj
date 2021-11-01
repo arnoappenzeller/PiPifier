@@ -28,6 +28,10 @@
 		11F1B51C1D4EC1010041579B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */; };
 		11F1B5241D4EC1010041579B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 11F1B5231D4EC1010041579B /* script.js */; };
 		11F1B5291D4EC1010041579B /* PiPifier Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11F1B5141D4EC1010041579B /* PiPifier Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52B35093272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg in Resources */ = {isa = PBXBuildFile; fileRef = 52B35091272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg */; };
+		52B35094272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg in Resources */ = {isa = PBXBuildFile; fileRef = 52B35091272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg */; };
+		52B35095272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg in Resources */ = {isa = PBXBuildFile; fileRef = 52B35092272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg */; };
+		52B35096272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg in Resources */ = {isa = PBXBuildFile; fileRef = 52B35092272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,8 @@
 		11F1B51B1D4EC1010041579B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		11F1B5221D4EC1010041579B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F1B5231D4EC1010041579B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		52B35091272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg */ = {isa = PBXFileReference; lastKnownFileType = file; path = PiP_Toolbar_Icon_white_xigua.svg; sourceTree = SOURCE_ROOT; };
+		52B35092272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg */ = {isa = PBXFileReference; lastKnownFileType = file; path = PiP_Toolbar_Icon_xigua.svg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,8 @@
 		52B3508C272BFD4A00B7B29E /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				52B35091272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg */,
+				52B35092272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg */,
 				1112598C26BBD2AD00A441C1 /* PiP_Toolbar_Icon_new.svg */,
 				1112598626BBD12C00A441C1 /* PiP_Toolbar_Icon_white.svg */,
 				1112598F26BBD2B500A441C1 /* PiP_Toolbar_Icon_white_new.svg */,
@@ -274,9 +282,10 @@
 				1112598826BBD12C00A441C1 /* PiP_Toolbar_Icon_white.svg in Resources */,
 				11DDACE526BB563B008E0B3D /* PiP_Toolbar_Icon_new_big_sur.pdf in Resources */,
 				11F1B5061D4EC0CD0041579B /* Assets.xcassets in Resources */,
-				119E42D524F52FF300F3226F /* PiP_Toolbar_Icon_new.pdf in Resources */,
+				52B35093272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg in Resources */,
 				11F1B5091D4EC0CD0041579B /* Main.storyboard in Resources */,
 				11DDACE226BB5526008E0B3D /* PiP_Toolbar_Icon.pdf in Resources */,
+				52B35095272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg in Resources */,
 				1112599026BBD2B500A441C1 /* PiP_Toolbar_Icon_white_new.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,12 +294,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B35096272F95EE00B7B29E /* PiP_Toolbar_Icon_xigua.svg in Resources */,
 				11DDACE326BB5526008E0B3D /* PiP_Toolbar_Icon.pdf in Resources */,
 				11DDACE626BB563B008E0B3D /* PiP_Toolbar_Icon_new_big_sur.pdf in Resources */,
 				1112599126BBD2B500A441C1 /* PiP_Toolbar_Icon_white_new.svg in Resources */,
 				1112598E26BBD2AD00A441C1 /* PiP_Toolbar_Icon_new.svg in Resources */,
 				11F1B5241D4EC1010041579B /* script.js in Resources */,
 				1112598926BBD12C00A441C1 /* PiP_Toolbar_Icon_white.svg in Resources */,
+				52B35094272F95EE00B7B29E /* PiP_Toolbar_Icon_white_xigua.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
