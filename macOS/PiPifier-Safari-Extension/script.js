@@ -2,6 +2,10 @@
 var whiteSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white_new.svg';
 var blackSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_new.svg';
 
+// xigua image URLs
+var whiteXiguaSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_white_xigua.svg';
+var blackXiguaSVG_Icon = safari.extension.baseURI + 'PiP_Toolbar_Icon_xigua.svg';
+
 safari.self.addEventListener("message", messageHandler); // Message recieved from Swift code
 window.onfocus = function() {
     previousResult = null;
@@ -54,6 +58,7 @@ var players = [
                {name: "Netflix", shouldAddButton: shouldAddNetflixButton, addButton: addNetflixButton},
                {name: "Wistia", shouldAddButton: shouldAddWistiaButton, addButton: addWistiaButton},
                //TODO: add other players here
+               {name: "Xigua", shouldAddButton: shouldAddXiguaButton, addButton: addXiguaButton},
                ];
 
 function addCustomPiPButtons() {
@@ -65,6 +70,28 @@ function addCustomPiPButtons() {
 }
 
 //----------------- Player Implementations -------------------------
+
+function shouldAddXiguaButton() {
+  // check if on xigua
+  return location.hostname.match('ixigua')
+  && document.getElementsByClassName('PiPifierButton').length == 0;
+}
+
+function addXiguaButton() {
+  if (!shouldAddXiguaButton()) return;
+  var button = document.createElement("button");
+  button.className = "xgplayer-icon PiPifierButton";
+  button.title = "PiP (by PiPifier)";
+  button.onclick = enablePiP;
+  
+  var buttonImage = document.createElement("img");
+  buttonImage.src = whiteXiguaSVG_Icon;
+  buttonImage.width = 24;
+  buttonImage.height = 36;
+  button.appendChild(buttonImage);
+  
+  document.getElementsByClassName("xgplayer-controls")[0].appendChild(button);
+}
 
 function shouldAddYouTubeButton() {
     //check if on youtube or player is embedded
